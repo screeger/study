@@ -1,23 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PillBtn from './pillBtn';
 
 import './pillNavigation.css';
 
 class PillNavigation extends React.Component {
 	render () {
+		const { active, navRequested } = this.props;
 		return (
 			<div className='pillNavigation'>
-				<button className={`pillFirst ${this.props.active === 1 && 'active'}`}>1</button>
-				<button className={this.props.active === 2 ? 'active' : null}>2</button>
-				<button className={`pillLast ${this.props.active === 3 && 'active'}`}>3</button>
+				<PillBtn position={1} active={active === 1} navRequested={navRequested} />
+				<PillBtn position={2} active={active === 2} navRequested={navRequested} />
+				<PillBtn position={3} active={active === 3} navRequested={navRequested} />
 			</div>
 		)
 	}
 
+
 }
 
 PillNavigation.propTypes = {
-	active: PropTypes.number.isRequired
+	active: PropTypes.number.isRequired,
+	navRequested: PropTypes.func.isRequired
 }
 
 export default PillNavigation;
