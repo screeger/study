@@ -16,14 +16,21 @@ class Scenario extends React.Component {
         <h1>This is a Scenario Page</h1>
 				<Page />
         <button
-          onClick={() => {
-            this.setState({ currentPage: 2});
-          }}
+          onClick={this.getNextPage}
         >
           Next Page
         </button>
       </React.Fragment>
     );
+  }
+
+  getNextPage = () => {
+    const atLastPage = this.state.currentPage === 3;
+    if (atLastPage) {
+      this.props.goNextPage('compass');
+    } else {
+      this.setState({ currentPage: this.state.currentPage + 1});
+    }
   }
 }
 

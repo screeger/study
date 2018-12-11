@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import CompassSpinner from "./compassSpinner";
+import CompassSpinner from "../components/compassSpinner";
 import * as constants from "../helpers/constants";
 
 class Compass extends React.Component {
