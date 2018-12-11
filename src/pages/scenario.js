@@ -11,6 +11,7 @@ class Scenario extends React.Component {
 
   render() {
     const Page = this.props.scenario["page" + this.state.currentPage];
+
     return (
       <React.Fragment>
         <h1>This is a Scenario Page</h1>
@@ -23,7 +24,6 @@ class Scenario extends React.Component {
   getNextPage = evt => {
     /* Normally an event is passed in, but the PillNavigation will explicity
       pass an integer to jump to a specific page. */
-    debugger;
     if (typeof evt === "number") {
       this.setState({ currentPage: evt });
     } else {
@@ -36,18 +36,20 @@ class Scenario extends React.Component {
   };
 
   atLastPage = () => {
-    debugger; // FINISH THIS
-    // return (
-    //   this.state.currentPage ===
-    //   Object.keys(this.props.scenario).reduce((accum, current) => {
-    //     // Look for pages and extract the number off it.
-    //     const matches = /^page\d+$/.test(current);
+    const maxPage = Object.keys(this.props.scenario).reduce((accum, current) => {
+      // Look for pages and extract the number off it.
+      const matches = current.match(/(?<=page)\d+$/);
+      if (matches) {
+        const pageNbr = parseInt(matches[0], 10);
+        if (pageNbr > accum) {
+          return pageNbr;
+        }
+        return accum;
+      }
+      return accum;
+    }, 0);
 
-    //     } else {
-    //       return accum;
-    //     }
-    //   }, 0)
-    // );
+    return this.state.currentPage === maxPage;
   };
 }
 
