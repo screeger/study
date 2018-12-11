@@ -1,27 +1,37 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import * as pages from './pages';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+      currentPage: 'intro1',
+      scenario: null
+    }
+  }
+
   render() {
+    let Page = pages[this.state.currentPage];
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <header>Sam’s Thesis</header>
+        <main>
+          <Page goNextPage={this.goNextPage} scenario={this.state.scenario} loadScenario={this.loadScenario} />
+        </main>
+      </React.Fragment>
     );
+  }
+
+  goNextPage = (pageName) => {
+    this.setState({ currentPage: pageName });
+  }
+  
+  loadScenario = (scenarioId) => {
+    import('./scenarios/scene' + scenarioId)
+    .then(scenario => {
+      this.setState({ scenario });
+    })
   }
 }
 

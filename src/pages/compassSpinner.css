@@ -1,0 +1,47 @@
+.compass {
+	width: 400px;
+	height: 400px;
+	background-image: url('../images/compass-bkgd.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	border: none;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	position: relative;
+}
+
+.compassDial {
+	display: block;
+	position: absolute;
+	left: 25px;
+	top: 25px;
+	width: 350px;
+	height: 350px;
+	background-image: url('../images/compass-spinner.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+}
+
+.isSpinning {
+	animation-name: cssAnimation;
+	animation-duration: 4s;
+	animation-timing-function: ease-out;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+	from {
+		transform: rotate(0turn);
+	}
+}
+
+@keyframes saveThis {
+	to {
+		transform: rotate(6.3turn);
+	}
+}
