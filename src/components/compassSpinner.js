@@ -10,10 +10,13 @@ class RandomSpinner extends React.Component {
       isSpinning: false
     };
 		this.refCompass = React.createRef();
-		this.slot = 0;
+    this.slot = 0;
   }
 
   onSpin = () => {
+    this.keyStack = [];
+    window.addEventListener('keypress', this.listenForNumbers)
+
     this.refCompass.current.blur();
 
     if (this.state.isSpinning) {
@@ -22,7 +25,7 @@ class RandomSpinner extends React.Component {
       const randNbr = parseInt(Math.random() * this.props.maxSize, 10) + 1;
       this.props.hasBeenChoosen(randNbr);
       this.slot = (1 / this.props.maxSize) * randNbr + constants.FREE_ROTATIONS;
-      window.setTimeout(() => {
+      this.timeout = window.setTimeout(() => {
         this.props.finishedAnimation();
       }, 1000 * ANIMATION_TIME);
     }
@@ -44,6 +47,18 @@ class RandomSpinner extends React.Component {
         />
       </button>
     );
+  }
+
+  listenForNumbers = (evt) => {
+    if (evt.which > 47 && evt.which < 58) {
+      this.keyStack.push(evt.key);
+      if (this.keyStack.length > 1) {
+        window.clearTimeout(this.timeout);
+        window.removeEventListener('keypress', this.listenForNumbers);
+        this.props.hasBeenChoosen(parseInt(this.keyStack.join(''),10));
+        this.props.finishedAnimation();
+      }
+    }
   }
 }
 
