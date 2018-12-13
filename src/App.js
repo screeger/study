@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import * as pages from './pages';
+import BackgroundImg from './components/backgroundImg';
 import ErrorBoundary from './components/ErrorBoundary';
 
 class App extends Component {
@@ -15,14 +16,14 @@ class App extends Component {
   render() {
     let Page = pages[this.state.currentPage];
     return (
-      <React.Fragment>
+      <BackgroundImg pageName={this.state.currentPage}>
         <header>Sam’s Thesis</header>
         <main>
           <ErrorBoundary>
             <Page goNextPage={this.goNextPage} scenario={this.state.scenario} loadScenario={this.loadScenario} />
           </ErrorBoundary>
         </main>
-      </React.Fragment>
+      </BackgroundImg>
     );
   }
 
