@@ -10,11 +10,12 @@ class Scenario extends React.Component {
   }
 
   render() {
+    const Overview = this.props.scenario.overview;
     const Page = this.props.scenario["page" + this.state.currentPage];
 
     return (
       <React.Fragment>
-        <h1>This is a Scenario Page</h1>
+        <Overview />
         <Page getNextPage={this.getNextPage} />
         <button onClick={this.getNextPage}>Next Scenario Page</button>
       </React.Fragment>
