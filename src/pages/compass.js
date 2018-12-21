@@ -39,7 +39,8 @@ class Compass extends React.Component {
 
   choosenScenario = value => {
     this.setState({ scenario: value });
-    this.props.loadScenario(value);
+    // Commented out while debugging the spinner.
+    // this.props.loadScenario(value);
   };
  
   finishedAnimation = () => {
