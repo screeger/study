@@ -3,36 +3,19 @@ import React from "react";
 export default props => {
   return (
     <React.Fragment>
-      <h1>This is Scene 1</h1>
+      <h1>Define the Stakeholders' Needs and Characteristics</h1>
       <p>
-        This “overview” page is where you will set-up this particular scenario.
+        <em>What are the needs, tasks, and environments of the people to <strong>design a playground</strong>. What are the characteristics and attributes of the people using the <strong>playground</strong>? </em>
       </p>
-      <p>
-        Here are some examples of tags you can use. This line is {"<p>"} tag.
-      </p>
-      <p>Now for a dandy Ordered List ({"<ol>"} tag.)</p>
-      <ol>
-        <li>This is {"<li>"} one</li>
-        <li>This is {"<li>"} two</li>
-        <li>This is {"<li>"} three</li>
-        <li>This is {"<li>"} four</li>
-      </ol>
-      <p>Now for an extraordinary Unordered List ({"<ul>"} tag.)</p>
+
+      <p>Here are some thought starters:</p>
       <ul>
-        <li>This is {"<li>"} one</li>
-        <li>This is {"<li>"} two</li>
-        <li>This is {"<li>"} three</li>
-        <li>This is {"<li>"} four</li>
+        <li>Characteristics that are not similar to you</li>
+        <li>How their personality affects their needs</li>
+        <li>What is of importance to accomplish a task</li>
+        <li>Traditions/habits from other cultures</li>
       </ul>
-      <p>
-        What about fancy text, like <strong>Bold stuff ({"<strong>"})</strong>{" "}
-        or <em>italic stuff ({"<em>"})</em>. Heck, we can even{" "}
-        <strong>
-          <em>combine them together.</em>
-        </strong>{" "}
-        for a wild ride.
-      </p>
-      <h2>This {'<h2>'} tag is a smaller header than the one above.</h2>
+
     </React.Fragment>
   );
 };

@@ -17,7 +17,6 @@ class App extends Component {
     let Page = pages[this.state.currentPage];
     return (
       <BackgroundImg pageName={this.state.currentPage}>
-        <header>Sam’s Thesis</header>
         <main>
           <ErrorBoundary>
             <Page goNextPage={this.goNextPage} scenario={this.state.scenario} loadScenario={this.loadScenario} />

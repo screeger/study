@@ -2,6 +2,7 @@
 	width: 400px;
 	height: 400px;
 	background-image: url('../images/compass-bkgd.svg');
+	background-color: transparent;
 	background-size: contain;
 	background-repeat: no-repeat;
 	border: none;
