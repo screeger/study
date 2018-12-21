@@ -15,7 +15,6 @@ function BackgroundImg(props) {
           minHeight: "600px"
         }}
       >
-        <p>this is the backgroundImage</p>
         {props.children}
       </div>
     );

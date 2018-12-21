@@ -1,0 +1,7 @@
+.timer {
+	font-size: 2em;
+	width: 6em;
+}
+.timer.running {
+	font-family: monospace;
+}

@@ -15,7 +15,6 @@ class Compass extends React.Component {
     return (
       <React.Fragment>
         <h1>This is Compass Page</h1>
-        <p>Hey y’all, click the spin-dinghous.</p>
         <p style={{ textAlign: "center" }}>
           <CompassSpinner
             maxSize={constants.MAX_SCENARIOS}
@@ -40,7 +39,7 @@ class Compass extends React.Component {
   choosenScenario = value => {
     this.setState({ scenario: value });
     // Commented out while debugging the spinner.
-    // this.props.loadScenario(value);
+    this.props.loadScenario(value);
   };
  
   finishedAnimation = () => {
