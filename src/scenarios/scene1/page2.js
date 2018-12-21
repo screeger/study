@@ -10,7 +10,7 @@ export default (props) => {
       <p>What does the person need to comfortably sleep in a desert with no trees?</p>
       <h2>Option 2</h2>
       <p>blah blah</p>
-      <h3>Option 3</h3>
+      <h2>Option 3</h2>
       <p>All stuff in this area talks about page one things.</p>
     </React.Fragment>
   );
