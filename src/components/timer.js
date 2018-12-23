@@ -23,8 +23,8 @@ class Question extends React.Component {
     return (
       <React.Fragment>
         <button
-          className={"timer" + (this.state.running ? " running" : "")}
-          onClick={this.toggleTimer}
+          className={"timer themed" + (this.state.running ? " running" : "")}
+          onClick={this.startTimer}
         >
           {btnText}
         </button>
@@ -32,21 +32,23 @@ class Question extends React.Component {
     );
   }
 
-  toggleTimer = () => {
+  startTimer = () => {
     // Actually, there is no pause/resume, so this function is really just starting the timer.
-    this.setState({ running: !this.state.running });
+    if (!this.state.running && this.state.seconds) {
+      this.setState({ running: true });
 
-    this.interval = window.setInterval(() => {
-      const seconds = this.state.seconds - 1;
-      if (seconds) {
-        this.setState({ seconds });
-      } else {
-				// Timer just hit zero.
-				window.clearInterval(this.interval);
-        this.setState({ seconds, running: false });
-        this.props.onDing();
-      }
-    }, 50);
+      this.interval = window.setInterval(() => {
+        const seconds = this.state.seconds - 1;
+        if (seconds) {
+          this.setState({ seconds });
+        } else {
+          // Timer just hit zero.
+          window.clearInterval(this.interval);
+          this.setState({ seconds, running: false });
+          this.props.onDing();
+        }
+      }, 50);
+    }
   };
 
   formatSeconds = seconds => {

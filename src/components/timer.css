@@ -1,6 +1,8 @@
-.timer {
-	font-size: 2em;
-	width: 6em;
+button.themed.timer {
+	font-size: 1.6em;
+	width: 7em;
+	border: medium solid #e5cb2c;
+	background-color: white;
 }
 .timer.running {
 	font-family: monospace;

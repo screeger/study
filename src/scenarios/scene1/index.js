@@ -1,3 +1,4 @@
+export const id = 1;
 export { default as overview } from './overview';
 export { default as page1 } from './page1';
 export { default as page2 } from './page2';

@@ -2,7 +2,7 @@ import React from "react";
 import Timer from "../../components/timer";
 
 class TimerPage extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       timerIsDone: false
@@ -11,14 +11,25 @@ class TimerPage extends React.Component {
 
   render() {
     const doneMessage = (
-      <p>Put your pencils down. Press the Next Page button to continue.</p>
+      <p style={{ textAlign: "center" }}>
+        Put your pencils down. Press the Next Page button to continue.
+      </p>
     );
     return (
-      <React.Fragment>
-        <h1>Isn’t this timer just adorbs?</h1>
-        <p><Timer minutes={5.0} onDing={this.showCompletionMessage} /></p>
+      <main>
+        <h1 style={{ marginBottom: "3em" }}>Isn’t this timer just adorbs?</h1>
+        <p>
+          Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon
+          is tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is
+          tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty.
+          Bacon is tasty. Bacon is tasty. Bacon is tasty.
+        </p>
+
+        <p style={{ margin: "2em", textAlign: "center" }}>
+          <Timer minutes={5.0} onDing={this.showCompletionMessage} />
+        </p>
         {this.state.timerIsDone && doneMessage}
-      </React.Fragment>
+      </main>
     );
   }
   showCompletionMessage = () => {

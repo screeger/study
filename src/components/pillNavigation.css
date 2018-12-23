@@ -1,11 +1,12 @@
 .pillNavigation button {
-	background-color: aquamarine;
-	color: navy;
-	font-size: 2em;
+	background-color: dimgray;
+	color: white;
+	font-size: 1.3em;
 	width: 1.7em;
+	height: 1.7em;
 }
 .pillNavigation button.active {
-	background-color: hotpink;
+	background-color: dimgray !important;
 }
 .pillFirst {
 	border-top-left-radius: 50%;
