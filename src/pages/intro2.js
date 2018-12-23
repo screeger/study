@@ -1,12 +1,14 @@
 import React from 'react';
+import NextPage from '../components/nextPage';
 
 export default (props) => {
 	return (
-		<React.Fragment>
+		<main>
 			<h1>This is Intro Page Two</h1>
-			<button onClick={() => {
-				props.goNextPage('compass');
-			}}>Next Page</button>
-		</React.Fragment>
+			<p>Lots of cool stuff to talk about.</p>
+			<NextPage gotoPage={() => {
+				props.goNextPage('problemScenario');
+			}}>Continue</NextPage>
+		</main>
 	);
 }

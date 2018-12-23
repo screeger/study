@@ -1,0 +1,18 @@
+textarea {
+	height: 4.5em;
+	font-size: 1em;
+	width: 100%;
+}
+main > h1:first-child {
+	margin-bottom: 2em;
+}
+.ponderLayout {
+	display: flex;
+}
+.ponderLayout section:first-child {
+	padding-right: 1em;
+}
+.ponderLayout section:last-child {
+	background-color: rgb(250,246,217);
+	padding: 1em;
+}

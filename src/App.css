@@ -1,3 +1,40 @@
+#root > :first-child {
+    margin-top: 0;
+}
 main {
-    padding: 2em;
+    padding: 0 2em;
+    margin: 2em 0;
+}
+h1, h2, h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0.5em;
+}
+p {
+    margin-top: 0.5em;
+}
+h1 {
+    border-bottom: solid #e5cb2c 4px;
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.2em;
+}
+.compassLayout {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.compassLayout div:first-child {
+    flex-basis: 400px;
+}
+.compassLayout div:last-child {
+    padding-right: 2em;
+}
+button.themed {
+    background-color: #e5cb2c;
+    height: 2em;
+    border-radius: 1em;
+    border-color: thin solid #333;
+    font-size: 1em;
+    font-weight: bold;
 }

@@ -6,12 +6,12 @@ import './pillNavigation.css';
 
 class PillNavigation extends React.Component {
 	render () {
-		const { active, navRequested } = this.props;
+		const { active, navRequested, color } = this.props;
 		return (
 			<div className='pillNavigation'>
-				<PillBtn position={1} active={active === 1} navRequested={navRequested} />
-				<PillBtn position={2} active={active === 2} navRequested={navRequested} />
-				<PillBtn position={3} active={active === 3} navRequested={navRequested} />
+				<PillBtn position={1} active={active === 1} navRequested={navRequested} color={color} />
+				<PillBtn position={2} active={active === 2} navRequested={navRequested} color={color} />
+				<PillBtn position={3} active={active === 3} navRequested={navRequested} color={color} />
 			</div>
 		)
 	}
@@ -21,7 +21,8 @@ class PillNavigation extends React.Component {
 
 PillNavigation.propTypes = {
 	active: PropTypes.number.isRequired,
-	navRequested: PropTypes.func.isRequired
+	navRequested: PropTypes.func.isRequired,
+	color: PropTypes.string.isRequired
 }
 
 export default PillNavigation;

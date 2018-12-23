@@ -1,7 +1,8 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import CompassSpinner from "../components/compassSpinner";
 import * as constants from "../helpers/constants";
+import NextPage from "../components/nextPage";
 
 class Compass extends React.Component {
   constructor(props) {
@@ -13,26 +14,43 @@ class Compass extends React.Component {
   }
   render() {
     return (
-      <React.Fragment>
-        <h1>This is Compass Page</h1>
-        <p style={{ textAlign: "center" }}>
-          <CompassSpinner
-            maxSize={constants.MAX_SCENARIOS}
-            hasBeenChoosen={this.choosenScenario}
-            finishedAnimation={this.finishedAnimation}
-          />
-        </p>
-        {this.state.scenario && this.state.finishedAnimation && (
-          <h2 style={{ textAlign: "center" }}>Your lucky number is {this.state.scenario}.</h2>
-        )}
-        <button
-          onClick={() => {
+      <main>
+        <h1>Strategy Generator</h1>
+        <section className="compassLayout">
+          <div>
+            <CompassSpinner
+              maxSize={constants.MAX_SCENARIOS}
+              hasBeenChoosen={this.choosenScenario}
+              finishedAnimation={this.finishedAnimation}
+            />
+          </div>
+          <div>
+            <p>Press the button to receive a random strategy.</p>
+            {this.state.scenario && this.state.finishedAnimation && (
+              <React.Fragment>
+                <h2
+                  style={{
+                    padding: "1em",
+                    marginTop: "4em",
+                    backgroundColor: "coral",
+                    fontFamily: "Georgia, 'Times New Roman', Times, serif"
+                  }}
+                >
+                  {this.state.scenario}
+                </h2>
+                <h3>{constants.SCENARIOS[this.state.scenario].name}</h3>
+              </React.Fragment>
+            )}
+          </div>
+        </section>
+        <NextPage
+          gotoPage={() => {
             this.props.goNextPage("scenario");
           }}
         >
-          Next Page
-        </button>
-      </React.Fragment>
+          Continue
+        </NextPage>
+      </main>
     );
   }
 
@@ -41,7 +59,7 @@ class Compass extends React.Component {
     // Commented out while debugging the spinner.
     this.props.loadScenario(value);
   };
- 
+
   finishedAnimation = () => {
     this.setState({ finishedAnimation: true });
   };
@@ -50,6 +68,6 @@ class Compass extends React.Component {
 Compass.propTypes = {
   loadScenario: PropTypes.func.isRequired,
   goNextPage: PropTypes.func.isRequired
-}
+};
 
 export default Compass;

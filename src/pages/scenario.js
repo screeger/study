@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { SCENARIOS } from "../helpers/constants";
+import NextPage from "../components/nextPage";
 
 class Scenario extends React.Component {
   constructor(props) {
@@ -15,9 +17,14 @@ class Scenario extends React.Component {
 
     return (
       <React.Fragment>
-        <Overview />
-        <Page getNextPage={this.getNextPage} />
-        <button onClick={this.getNextPage}>Next Scenario Page</button>
+        <Page
+          getNextPage={this.getNextPage}
+          overview={Overview}
+          id={this.props.scenario.id}
+          pageNbr={this.state.currentPage}
+          color={SCENARIOS[this.props.scenario.id].color}
+        />
+        <NextPage gotoPage={this.getNextPage}>Next Scenario Page</NextPage>
       </React.Fragment>
     );
   }
@@ -37,18 +44,21 @@ class Scenario extends React.Component {
   };
 
   atLastPage = () => {
-    const maxPage = Object.keys(this.props.scenario).reduce((accum, current) => {
-      // Look for pages and extract the number off it.
-      const matches = current.match(/(?<=page)\d+$/);
-      if (matches) {
-        const pageNbr = parseInt(matches[0], 10);
-        if (pageNbr > accum) {
-          return pageNbr;
+    const maxPage = Object.keys(this.props.scenario).reduce(
+      (accum, current) => {
+        // Look for pages and extract the number off it.
+        const matches = current.match(/(?<=page)\d+$/);
+        if (matches) {
+          const pageNbr = parseInt(matches[0], 10);
+          if (pageNbr > accum) {
+            return pageNbr;
+          }
+          return accum;
         }
         return accum;
-      }
-      return accum;
-    }, 0);
+      },
+      0
+    );
 
     return this.state.currentPage === maxPage;
   };
