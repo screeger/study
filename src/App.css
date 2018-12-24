@@ -1,9 +1,15 @@
+p, h1, h2, h3 {
+    line-height: 1.4;
+}
 #root > :first-child {
     margin-top: 0;
 }
 main {
-    padding: 0 2em;
+    padding: 0 2em 50px;
     margin: 2em 0;
+}
+main > h1:first-child {
+	margin-bottom: 2em;
 }
 h1, h2, h3 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

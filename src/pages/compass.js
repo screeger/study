@@ -26,20 +26,32 @@ class Compass extends React.Component {
             />
           </div>
           <div>
-            <p>Press the button to receive a random strategy.</p>
+            <p
+              style={{
+                marginBottom: "4em"
+              }}
+            >
+              Press the button to receive a random strategy.
+            </p>
             {this.state.scenario && this.state.finishedAnimation && (
               <React.Fragment>
+                <h2 style={{ textAlign: "center" }}>
+                  <strong style={{ paddingLeft: "1em" }}>
+                    Your random strategy to explore is:
+                  </strong>
+                </h2>
                 <h2
                   style={{
                     padding: "1em",
-                    marginTop: "4em",
-                    backgroundColor: "coral",
-                    fontFamily: "Georgia, 'Times New Roman', Times, serif"
+                    backgroundColor: "#1A2E81",
+                    color: "white",
+                    fontFamily: "Georgia, 'Times New Roman', Times, serif",
+                    textAlign: "center"
                   }}
                 >
-                  {this.state.scenario}
+                  {/* {this.state.scenario} */}
+                  {constants.SCENARIOS[this.state.scenario].name}
                 </h2>
-                <h3>{constants.SCENARIOS[this.state.scenario].name}</h3>
               </React.Fragment>
             )}
           </div>

@@ -12,7 +12,7 @@ export default props => {
 
           </p>
           <p>&nbsp;</p>
-          <PonderBox storageKey="s2p4" />
+          <PonderBox storageKey={`s${props.id}p${props.pageNbr}`} />
         </section>
         <section>
           <h2>Strategy:</h2>

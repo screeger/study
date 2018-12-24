@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 class TextArea extends React.Component {
   constructor(props) {
     super(props);
-    this.defaultText = "Enter your thoughts here...";
+    this.placeholderText = "Enter your thoughts here...";
     this.state = {
-      contents: this.props.contents || this.defaultText
+      contents: this.props.contents || ''
     };
   }
 
@@ -17,6 +17,7 @@ class TextArea extends React.Component {
           value={this.state.contents}
           onChange={this.textChanged}
           onBlur={this.blurredTextbox}
+          placeholder={this.placeholderText}
         />
       </React.Fragment>
     );

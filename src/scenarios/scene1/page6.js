@@ -11,7 +11,7 @@ export default props => {
           Now that you have completed new concepts, enter new problem statements that would help inform your concept.
           </p>
           <p>&nbsp;</p>
-          <PonderBox storageKey="s1p6" />
+          <PonderBox storageKey={`s${props.id}p${props.pageNbr}`} />
         </section>
         <section>
           <h2>Strategy:</h2>
