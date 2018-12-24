@@ -1,17 +1,35 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import PillNavigation from "../../components/pillNavigation";
 
-export default (props) => {
+function Page(props) {
+  const Overview = props.overview;
   return (
     <React.Fragment>
-      <PillNavigation active={2} navRequested={props.getNextPage} />
-      <h1>Design a shelter for sleeping outdoors</h1>
-      <h2>Option 1</h2>
-      <p>What does the person need to comfortably sleep in a desert with no trees?</p>
-      <h2>Option 2</h2>
-      <p>blah blah</p>
-      <h3>Option 3</h3>
-      <p>All stuff in this area talks about page one things.</p>
+      <Overview id={props.id} />
+      <main>
+        <PillNavigation
+          active={props.pageNbr}
+          navRequested={props.getNextPage}
+          color={props.color}
+        />
+        <h1>Design an event that educates on climate change</h1>
+        <h2>Consider 1</h2>
+        <p>How to attract...FIX THIS </p>
+        <h2>Consider 2</h2>
+        <p>FIX THIS</p>
+        <h2>Consider 3</h2>
+        <p>FIX THIS</p>
+      </main>
     </React.Fragment>
   );
+}
+Page.propTypes = {
+  getNextPage: PropTypes.func.isRequired,
+  overview: PropTypes.func,
+  id: PropTypes.number.isRequired,
+  color: PropTypes.string.isRequired
 };
+
+export default Page;
