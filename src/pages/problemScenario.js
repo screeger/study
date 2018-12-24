@@ -18,7 +18,7 @@ export default (props) => {
 					backgroundColor: 'rgba(255, 255, 255, 0.6)',
 					padding: '0.5em 1em 1em 0'
 				}}>
-				Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. Bacon is tasty and nutricious. </p>
+				A city resident has recently donated a corner lot for a playground. You are an engineer who lives in the neighborhood, and you have been asked by the city to help with the project. Your task is to design playground equipment for the lot using locally sourced materials that are able to withstand outdoor conditions all year long. </p>
 			</section>
 			<NextPage gotoPage={() => {
 				props.goNextPage('compass');

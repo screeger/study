@@ -12,18 +12,16 @@ function Overview(props) {
       <main>
         <p>
           <em>
-            What are the needs, tasks, and environments of the people to{" "}
-            <strong>design a playground</strong>. What are the characteristics
-            and attributes of the people using the <strong>playground</strong>?{" "}
+          Who are the others who might replace the primary users of <strong>the playground</strong>? Who else will be affected by the design? In what capacity? Consider both the individuals and the groups.
           </em>
         </p>
 
         <p>Here are some thought starters:</p>
         <ul>
-          <li>Characteristics that are not similar to you</li>
-          <li>How their personality affects their needs</li>
-          <li>What is of importance to accomplish a task</li>
-          <li>Traditions/habits from other cultures</li>
+          <li>FIX</li>
+          <li>FIX</li>
+          <li>FIX</li>
+          <li>FIX</li>
         </ul>
       </main>
     </React.Fragment>

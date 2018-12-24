@@ -8,24 +8,18 @@ export default props => {
       <div className="ponderLayout">
         <section>
           <p>
-            Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty.
-            Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty.
-            Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty.
-            Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty.
+          Enter an alternative problem statement using this strategy relating to the playground.
+
           </p>
           <p>&nbsp;</p>
           <PonderBox storageKey="s2p4" />
         </section>
         <section>
           <h2>Strategy:</h2>
-          <p>Determine the best burger and fries.</p>
+          <p>Substitute the Primary Stakeholder with Another Stakeholder</p>
           <h2>Scenario:</h2>
           <p>
-            A city resident has recently Bacon is tasty. Bacon is tasty. Bacon
-            is tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is
-            tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is
-            tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is
-            tasty. Bacon is tasty.
+          A city resident has recently donated a corner lot for a playground. You are an engineer who lives in the neighborhood, and you have been asked by the city to help with the project. Your task is to design playground equipment for the lot using locally sourced materials that are able to withstand outdoor conditions all year long.
           </p>
         </section>
       </div>
