@@ -6,7 +6,7 @@ import "./nextPage.css";
 class NextPage extends React.Component {
   render() {
     return (
-      <button className="nextPage" onClick={this.props.gotoPage}>
+      <button className="nextPage" onClick={this.props.gotoPage} disabled={this.props.disabled}>
         <span>{this.props.children}</span>
         <span />
       </button>
@@ -14,7 +14,8 @@ class NextPage extends React.Component {
   }
 }
 NextPage.propTypes = {
-  gotoPage: PropTypes.func.isRequired
+  gotoPage: PropTypes.func.isRequired,
+  disabled: PropTypes.bool
 };
 
 export default NextPage;

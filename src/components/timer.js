@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import leftPad from "left-pad";
+import KeystrokeListener from "../helpers/keystrokeListener";
 
 import "./timer.css";
 
@@ -11,6 +12,7 @@ class Question extends React.Component {
       seconds: props.minutes * 60,
       running: false
     };
+    this.keyListen = new KeystrokeListener("sam", this.timerDone);
   }
   render() {
     let btnText = "Begin Timer";
@@ -42,13 +44,16 @@ class Question extends React.Component {
         if (seconds) {
           this.setState({ seconds });
         } else {
-          // Timer just hit zero.
-          window.clearInterval(this.interval);
-          this.setState({ seconds, running: false });
-          this.props.onDing();
+          this.timerDone();
         }
-      }, 50);
+      }, 1000);
     }
+  };
+
+  timerDone = () => {
+    window.clearInterval(this.interval);
+    this.setState({ seconds: 0, running: false });
+    this.props.onDing();
   };
 
   formatSeconds = seconds => {

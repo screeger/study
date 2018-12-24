@@ -5,6 +5,9 @@
 	bottom: 1em;
 	right: 2em;
 }
+.nextPage[disabled] {
+	display: none;
+}
 .nextPage span:first-child {
 	color: white;
 	font-weight: bold;

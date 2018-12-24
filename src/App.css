@@ -38,3 +38,7 @@ button.themed {
     font-size: 1em;
     font-weight: bold;
 }
+.resultItem {
+    border-left: thick solid dimgray;
+    padding-left: 1em;
+}

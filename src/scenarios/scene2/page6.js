@@ -4,7 +4,7 @@ import PonderBox from "../../components/ponderBox";
 export default props => {
   return (
     <main>
-      <h1>Page 4 Ponder Box</h1>
+      <h1>Page 6 Ponder Box</h1>
       <div className="ponderLayout">
         <section>
           <p>
@@ -14,7 +14,7 @@ export default props => {
             Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty.
           </p>
           <p>&nbsp;</p>
-          <PonderBox storageKey="s1p4" />
+          <PonderBox storageKey="s2p6" />
         </section>
         <section>
           <h2>Strategy:</h2>

@@ -7,6 +7,7 @@ class Scenario extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      showNextBtn: true,
       currentPage: 1 // Scenario pages only
     };
   }
@@ -23,8 +24,9 @@ class Scenario extends React.Component {
           id={this.props.scenario.id}
           pageNbr={this.state.currentPage}
           color={SCENARIOS[this.props.scenario.id].color}
+          setBtnState={this.setBtnState}
         />
-        <NextPage gotoPage={this.getNextPage}>Next Scenario Page</NextPage>
+        <NextPage disabled={!this.state.showNextBtn} gotoPage={this.getNextPage}>Next Scenario Page</NextPage>
       </React.Fragment>
     );
   }
@@ -62,6 +64,12 @@ class Scenario extends React.Component {
 
     return this.state.currentPage === maxPage;
   };
+
+  setBtnState = (newState) => {
+    if (newState.hasOwnProperty('showNextBtn')) {
+      this.setState({ showNextBtn: newState.showNextBtn });
+    }
+  }
 }
 
 Scenario.propTypes = {

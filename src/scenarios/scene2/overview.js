@@ -1,22 +1,36 @@
 import React from "react";
+import PropTypes from "prop-types";
+import TitleBlock from "../../components/titleBlock";
+import { SCENARIOS } from "../../helpers/constants";
 
-export default props => {
+function Overview(props) {
   return (
     <React.Fragment>
-      <h1>Substitute the Primary Stakeholder with Another Stakeholder</h1>
-      <p>
-        <em>Who are the others who might replace the primary users? Who else will be affected by<strong>using a playground</strong>? 
-  </em>
-      </p>
+      <TitleBlock color={SCENARIOS[props.id].color}>
+        {SCENARIOS[props.id].name}
+      </TitleBlock>
+      <main>
+        <p>
+          <em>
+            What are the needs, tasks, and environments of the people to{" "}
+            <strong>design a playground</strong>. What are the characteristics
+            and attributes of the people using the <strong>playground</strong>?{" "}
+          </em>
+        </p>
 
-      <p>Here are some thought starters:</p>
-      <ul>
-        <li>Consider groups of people</li>
-        <li>In what capacity are they affected?</li>
-        <li>Think of other individuals besides the well-known</li>
-        <li>Who else can benefit from it?</li>
-      </ul>
-
+        <p>Here are some thought starters:</p>
+        <ul>
+          <li>Characteristics that are not similar to you</li>
+          <li>How their personality affects their needs</li>
+          <li>What is of importance to accomplish a task</li>
+          <li>Traditions/habits from other cultures</li>
+        </ul>
+      </main>
     </React.Fragment>
   );
+}
+
+Overview.propTypes = {
+  id: PropTypes.number.isRequired
 };
+export default Overview;

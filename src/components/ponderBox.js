@@ -1,23 +1,38 @@
 import React from "react";
 import PropTypes from "prop-types";
+import TextArea from "./textArea";
+import { setItem, getForPage } from "../helpers/storage";
 
 import "./ponderBox.css";
 
 class PonderBox extends React.Component {
   constructor(props) {
     super(props);
-    this.defaultText = "Enter your thoughts here...";
+    // Look for previously saved values and load them.
+    let contents = getForPage(props.storageKey);
+    let count = 1;
+    if (contents.length === 0) {
+      count = 1;
+      contents = [""];
+    } else {
+      count = contents.length;
+    }
     this.state = {
-      count: 1,
-      contents: [this.defaultText]
+      count,
+      contents
     };
   }
 
-  defaultText;
-
   render() {
-    const textareas = this.state.contents.map((text, idx) => {
-      return <textarea key={idx} value={text} onChange={this.textChanged} />;
+    const textareas = this.state.contents.map((contentsObj, idx) => {
+      return (
+        <TextArea
+          key={`${this.props.storageKey}_${idx}`}
+          id={`${this.props.storageKey}_${idx}`}
+          doneEditing={this.save}
+          contents={contentsObj.value}
+        />
+      );
     });
     return (
       <React.Fragment>
@@ -34,13 +49,19 @@ class PonderBox extends React.Component {
       </React.Fragment>
     );
   }
+
   addPonder = () => {
+    const newContents = this.state.contents.slice();
+    newContents.push({ key: this.state.count + 1, value: "" });
     this.setState({
       count: this.state.count + 1,
-      contents: this.state.contents.push(this.defaultText)
+      contents: newContents
     });
   };
-  textChanged = () => {};
+
+  save = newContents => {
+    setItem(newContents.key, newContents.value);
+  };
 }
 
 PonderBox.propTypes = {

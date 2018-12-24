@@ -22,6 +22,7 @@ class Compass extends React.Component {
               maxSize={constants.MAX_SCENARIOS}
               hasBeenChoosen={this.choosenScenario}
               finishedAnimation={this.finishedAnimation}
+              availableScenarios={this.props.availableScenarios}
             />
           </div>
           <div>
@@ -44,6 +45,7 @@ class Compass extends React.Component {
           </div>
         </section>
         <NextPage
+          disabled={!this.state.scenario}
           gotoPage={() => {
             this.props.goNextPage("scenario");
           }}
@@ -56,8 +58,8 @@ class Compass extends React.Component {
 
   choosenScenario = value => {
     this.setState({ scenario: value });
-    // Commented out while debugging the spinner.
     this.props.loadScenario(value);
+    this.props.removeScenario(value);
   };
 
   finishedAnimation = () => {
@@ -67,7 +69,9 @@ class Compass extends React.Component {
 
 Compass.propTypes = {
   loadScenario: PropTypes.func.isRequired,
-  goNextPage: PropTypes.func.isRequired
+  goNextPage: PropTypes.func.isRequired,
+  availableScenarios: PropTypes.array.isRequired,
+  removeScenario: PropTypes.func.isRequired
 };
 
 export default Compass;

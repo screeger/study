@@ -14,7 +14,7 @@ export default props => {
             Bacon is tasty. Bacon is tasty. Bacon is tasty. Bacon is tasty.
           </p>
           <p>&nbsp;</p>
-          <PonderBox storageKey="scene1Page4" />
+          <PonderBox storageKey="s1p6" />
         </section>
         <section>
           <h2>Strategy:</h2>
