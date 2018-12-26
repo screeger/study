@@ -26,12 +26,7 @@ class Scenario extends React.Component {
           color={SCENARIOS[this.props.scenario.id].color}
           setBtnState={this.setBtnState}
         />
-        <NextPage
-          disabled={!this.state.showNextBtn}
-          gotoPage={this.getNextPage}
-        >
-          Next Scenario Page
-        </NextPage>
+        <NextPage disabled={!this.state.showNextBtn} gotoPage={this.getNextPage}>Continue</NextPage>
       </React.Fragment>
     );
   }
