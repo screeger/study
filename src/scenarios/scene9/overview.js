@@ -21,7 +21,7 @@ function Overview(props) {
         <p>Here are some thought starters:</p>
         <ul>
           <li>Are there budget constraints</li>
-          <li>What's the cost of the design, fabrication, etc?</li>
+          <li>What’s the cost of the design, fabrication, etc?</li>
           <li>What criteria is already guaranteed for the project?</li>
           
         </ul>

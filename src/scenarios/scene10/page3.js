@@ -18,9 +18,9 @@ function Page(props) {
         <h2>Consider 1</h2>
         <p>Miss the alarm in the morning</p>
         <h2>Consider 2</h2>
-        <p>Can't understand how the current device works</p>
+        <p>Can’t understand how the current device works</p>
         <h2>Consider 3</h2>
-        <p>Doesn't motivate me to wake up</p>
+        <p>Doesn’t motivate me to wake up</p>
       </main>
     </React.Fragment>
   );

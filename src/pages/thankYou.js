@@ -2,7 +2,7 @@ import React from 'react';
 import { clear } from '../helpers/storage';
 
 export default (props) => {
-	clear(); // This will wipe out the student's responses.
+	clear(); // This will wipe out the student’s responses.
 	return (
 		<main>
 			<h1>Thank You!</h1>

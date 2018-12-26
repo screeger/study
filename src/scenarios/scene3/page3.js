@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design a hat that keeps the person's head warm</h1>
+        <h1>Design a hat that keeps the person’s head warm</h1>
         <h2>Consider 1</h2>
         <p>Is it culturally appropriate?</p>
         <h2>Consider 2</h2>

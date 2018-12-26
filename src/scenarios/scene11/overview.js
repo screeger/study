@@ -19,7 +19,7 @@ function Overview(props) {
         <p>Here are some thought starters:</p>
         <ul>
           <li>Does it inspire movement?</li>
-          <li>What if it's adjustable?</li>
+          <li>What if it’s adjustable?</li>
           <li>Can it be on-the-go?</li>
           
         </ul>
