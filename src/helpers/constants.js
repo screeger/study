@@ -28,7 +28,7 @@ export const SCENARIOS = [
     color: "#9C5212"
   },
   {
-    name: "Describe the Users’ Interaction with the Functionality",
+    name: "Describe the Users’ Interaction",
     color: "#5D74A8"
   },
   {

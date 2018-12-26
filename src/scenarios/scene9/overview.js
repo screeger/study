@@ -1,0 +1,36 @@
+import React from "react";
+import PropTypes from "prop-types";
+import TitleBlock from "../../components/titleBlock";
+import { SCENARIOS } from "../../helpers/constants";
+
+function Overview(props) {
+  return (
+    <React.Fragment>
+      <TitleBlock color={SCENARIOS[props.id].color}>
+        {SCENARIOS[props.id].name}
+      </TitleBlock>
+      <main>
+        <p>
+          <em>
+          What are the items or actions that are already known to be true?
+          How can you challenge them?
+          How can you narrow the scope of the intended function? 
+          </em>
+        </p>
+
+        <p>Here are some thought starters:</p>
+        <ul>
+          <li>Are there budget constraints</li>
+          <li>What's the cost of the design, fabrication, etc?</li>
+          <li>What criteria is already guaranteed for the project?</li>
+          
+        </ul>
+      </main>
+    </React.Fragment>
+  );
+}
+
+Overview.propTypes = {
+  id: PropTypes.number.isRequired
+};
+export default Overview;
