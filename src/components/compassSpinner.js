@@ -23,7 +23,7 @@ class RandomSpinner extends React.Component {
     if (this.state.isSpinning) {
       this.props.hasBeenChoosen(null);
     } else {
-      const scenarioNbr = this.props.availableScenarios[this.getRandomNbr(this.props.maxSize)];
+      const scenarioNbr = this.props.availableScenarios[this.getRandomInt(this.props.maxSize)];
       this.props.hasBeenChoosen(scenarioNbr);
       this.slot =
         (1 / this.props.maxSize) * scenarioNbr + constants.FREE_ROTATIONS;
@@ -35,11 +35,16 @@ class RandomSpinner extends React.Component {
     this.setState({ isSpinning: !this.state.isSpinning });
   };
 
-  getRandomNbr = upperBound => {
+  getRandomInt = upperBound => {
     // Returns a number between zero and parameter.
-    // TODO: make sure this is evenly distributed
-    return parseInt(Math.random() * upperBound, 10);
+    return this.getRandomIntInclusive(1, upperBound);
   };
+
+  getRandomIntInclusive = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+  }
 
   render() {
     return (
