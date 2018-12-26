@@ -26,7 +26,12 @@ class Scenario extends React.Component {
           color={SCENARIOS[this.props.scenario.id].color}
           setBtnState={this.setBtnState}
         />
-        <NextPage disabled={!this.state.showNextBtn} gotoPage={this.getNextPage}>Next Scenario Page</NextPage>
+        <NextPage
+          disabled={!this.state.showNextBtn}
+          gotoPage={this.getNextPage}
+        >
+          Next Scenario Page
+        </NextPage>
       </React.Fragment>
     );
   }
@@ -38,7 +43,11 @@ class Scenario extends React.Component {
       this.setState({ currentPage: evt });
     } else {
       if (this.atLastPage()) {
-        this.props.goNextPage("compass");
+        if (this.props.availableScenarios.length === 0) {
+          this.props.goNextPage("results");
+        } else {
+          this.props.goNextPage("compass");
+        }
       } else {
         this.setState({ currentPage: this.state.currentPage + 1 });
       }
@@ -65,16 +74,17 @@ class Scenario extends React.Component {
     return this.state.currentPage === maxPage;
   };
 
-  setBtnState = (newState) => {
-    if (newState.hasOwnProperty('showNextBtn')) {
+  setBtnState = newState => {
+    if (newState.hasOwnProperty("showNextBtn")) {
       this.setState({ showNextBtn: newState.showNextBtn });
     }
-  }
+  };
 }
 
 Scenario.propTypes = {
   goNextPage: PropTypes.func.isRequired,
-  scenario: PropTypes.object.isRequired
+  scenario: PropTypes.object.isRequired,
+  availableScenarios: PropTypes.array.isRequired
 };
 
 export default Scenario;

@@ -14,6 +14,9 @@ class Question extends React.Component {
     };
     this.keyListen = new KeystrokeListener("sam", this.timerDone);
   }
+  componentWillUnmount () {
+    this.keyListen.remove();
+  }
   render() {
     let btnText = "Begin Timer";
     if (this.state.running) {

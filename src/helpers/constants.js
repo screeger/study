@@ -1,5 +1,4 @@
 export const MAX_SCENARIOS = 12;
-export const SCENARIOS_TO_RUN = 3;
 export const FREE_ROTATIONS = 9; // Number of times the compass rotates before picking a spot.
 export const SCENARIOS = [
   { retain: "leave this here" },

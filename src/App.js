@@ -2,30 +2,30 @@ import React, { Component } from "react";
 import "./App.css";
 import * as pages from "./pages";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { MAX_SCENARIOS, SCENARIOS_TO_RUN } from "./helpers/constants";
+import { scenarioSetup, getScenarioGroup } from './helpers/pageSetup';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    const availableScenarios = [];
-    for (let i = 1, j = MAX_SCENARIOS + 1; i < j; i++) {
-      availableScenarios.push(i);
+
+    const availableScenarios = scenarioSetup();
+    const group = getScenarioGroup();
+    let startingPage = 'intro1';
+    if (group === 'results') {
+      startingPage = 'results';
+    }
+    if (group === 'none') {
+      startingPage = 'notFound';
     }
     this.state = {
-      availableScenarios,
-      remainingScenarios: SCENARIOS_TO_RUN,
-      currentPage: "intro1",
+      availableScenarios, // An array of scenarios available to this student.
+      currentPage: startingPage,
       scenario: null // The scenario object (all of its pages)
     };
   }
 
   render() {
-    let Page;
-    if (this.state.remainingScenarios < 0) {
-      Page = pages["results"];
-    } else {
-      Page = pages[this.state.currentPage];
-    }
+    const Page = pages[this.state.currentPage];
     return (
       <ErrorBoundary>
         <Page
@@ -51,11 +51,10 @@ class App extends Component {
 
   removeScenario = scenarioId => {
     const availableScenarios = this.state.availableScenarios.filter(
-      item => item !== scenarioId
+      item => item.id !== scenarioId
     );
     this.setState({
-      availableScenarios,
-      remainingScenarios: this.state.remainingScenarios - 1
+      availableScenarios
     });
   };
 }
