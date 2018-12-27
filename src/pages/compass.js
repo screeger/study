@@ -8,7 +8,7 @@ class Compass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      scenario: null,
+      scenario: null, // scenario Id [1-12]
       finishedAnimation: false
     };
   }
@@ -43,13 +43,11 @@ class Compass extends React.Component {
                 <h2
                   style={{
                     padding: "1em",
-                    backgroundColor: "#1A2E81",
+                    backgroundColor: constants.SCENARIOS[this.state.scenario].color,
                     color: "white",
-                    fontFamily: "Georgia, 'Times New Roman', Times, serif",
                     textAlign: "center"
                   }}
                 >
-                  {/* {this.state.scenario} */}
                   {constants.SCENARIOS[this.state.scenario].name}
                 </h2>
               </React.Fragment>
@@ -68,10 +66,10 @@ class Compass extends React.Component {
     );
   }
 
-  choosenScenario = value => {
-    this.setState({ scenario: value });
-    this.props.loadScenario(value);
-    this.props.removeScenario(value);
+  choosenScenario = scenarioId => {
+    this.setState({ scenario: scenarioId });
+    this.props.loadScenario(scenarioId);
+    this.props.removeScenario(scenarioId);
   };
 
   finishedAnimation = () => {

@@ -8,7 +8,8 @@ class RandomSpinner extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isSpinning: false
+      isSpinning: false,
+      disabled: false
     };
     this.refCompass = React.createRef();
     this.slot = 0;
@@ -23,9 +24,8 @@ class RandomSpinner extends React.Component {
     if (this.state.isSpinning) {
       this.props.hasBeenChoosen(null);
     } else {
-      const subScenarioKey = this.getRandomInt(this.props.availableScenarios.length) - 1;
-      console.log('subScenarioKey', subScenarioKey);
-      console.log(JSON.stringify(this.props.availableScenarios));
+      const subScenarioKey =
+        this.getRandomInt(this.props.availableScenarios.length) - 1;
       const scenarioNbr = this.props.availableScenarios[subScenarioKey].id;
       this.props.hasBeenChoosen(scenarioNbr);
       this.slot =
@@ -35,7 +35,10 @@ class RandomSpinner extends React.Component {
         this.props.finishedAnimation();
       }, 1000 * ANIMATION_TIME);
     }
-    this.setState({ isSpinning: !this.state.isSpinning });
+    this.setState({
+      isSpinning: !this.state.isSpinning,
+      disabled: true
+    });
   };
 
   getRandomInt = upperBound => {
@@ -51,7 +54,12 @@ class RandomSpinner extends React.Component {
 
   render() {
     return (
-      <button onClick={this.onSpin} className="compass" ref={this.refCompass}>
+      <button
+        onClick={this.onSpin}
+        className="compass"
+        ref={this.refCompass}
+        disabled={this.state.disabled}
+      >
         <span
           className={`compassDial ${this.state.isSpinning && "isSpinning"}`}
           style={
