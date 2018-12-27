@@ -1,7 +1,13 @@
-import React from 'react';
-import NextPage from '../components/nextPage';
+import React from "react";
+import NextPage from "../components/nextPage";
+import { clear } from "../helpers/storage";
 
 export default (props) => {
+	/*  This will wipe out the student’s responses. Seems like a weird place to put this, but we need
+		to retain the values on course exit in case the student didn't print out the submissions.
+		Additionally, doing it on the first page seems a little risky too. Meh. */
+	clear();
+
 	return (
 		<main>
 			<h1>Why Use This Tool?</h1>

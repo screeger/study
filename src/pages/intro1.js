@@ -1,5 +1,5 @@
-import React from 'react';
-import NextPage from '../components/nextPage';
+import React from "react";
+import NextPage from "../components/nextPage";
 
 export default (props) => {
 	return (
@@ -16,6 +16,6 @@ export default (props) => {
 			<NextPage gotoPage={() => {
 				props.goNextPage('intro2');
 			}}>Continue</NextPage>
-			</main>
+		</main>
 	);
 }
