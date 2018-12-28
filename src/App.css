@@ -1,50 +1,59 @@
-p, h1, h2, h3 {
-    line-height: 1.4;
+p,
+h1,
+h2,
+h3 {
+  line-height: 1.4;
 }
 #root > :first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 main {
-    padding: 0 2em 50px;
-    margin: 2em 0;
+  padding: 0 2em 50px;
+  margin: 2em 0;
 }
 main > h1:first-child {
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 }
-h1, h2, h3 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 0.5em;
+h1,
+h2,
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 0.5em;
 }
 p {
-    margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 h1 {
-    border-bottom: solid #e5cb2c 4px;
-    font-size: 1.5em;
+  border-bottom: solid #e5cb2c 4px;
+  font-size: 1.5em;
 }
 h2 {
-    font-size: 1.2em;
+  font-size: 1.2em;
+}
+h3 {
+  font-size: 1.1em;
+  color: #2c2c86;
 }
 .compassLayout {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 .compassLayout div:first-child {
-    flex-basis: 400px;
+  flex-basis: 400px;
 }
 .compassLayout div:last-child {
-    padding-right: 2em;
+  padding-right: 10%;
 }
 button.themed {
-    background-color: #e5cb2c;
-    height: 2em;
-    border-radius: 1em;
-    border-color: thin solid #333;
-    font-size: 1em;
-    font-weight: bold;
+  background-color: #e5cb2c;
+  height: 2em;
+  border-radius: 1em;
+  border-color: thin solid #333;
+  font-size: 1em;
+  font-weight: bold;
 }
 .resultItem {
-    border-left: thick solid dimgray;
-    padding-left: 1em;
+  border-left: thick solid dimgray;
+  padding-left: 1em;
 }

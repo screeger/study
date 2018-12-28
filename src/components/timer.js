@@ -13,6 +13,7 @@ class Question extends React.Component {
       running: false
     };
     this.keyListen = new KeystrokeListener("sam", this.timerDone);
+    this.refTimer = React.createRef();
   }
   componentWillUnmount () {
     this.keyListen.remove();
@@ -30,6 +31,7 @@ class Question extends React.Component {
         <button
           className={"timer themed" + (this.state.running ? " running" : "")}
           onClick={this.startTimer}
+          ref={this.refTimer}
         >
           {btnText}
         </button>
@@ -50,6 +52,8 @@ class Question extends React.Component {
           this.timerDone();
         }
       }, 1000);
+
+      this.refTimer.current.blur();
     }
   };
 

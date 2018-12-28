@@ -1,9 +1,17 @@
 /**
  * All values are JSON stringified.
  */
-export function getAll () {
-	const keyArray = JSON.parse(window.localStorage.getItem('keyList'));
-	return keyArray.map(key => window.localStorage.getItem(key));
+
+export function getPonderboxKeys () {
+	const storage = window.localStorage;
+	const ponderKeys = [];
+	for (let i = 0, j = storage.length; i < j; i++) {
+		if (/^s\d+p\d+/.test(storage.key(i))) {
+			ponderKeys.push(storage.key(i));
+		}
+	}
+	ponderKeys.sort();
+	return ponderKeys;
 }
 
 export function getForPage(storageId) {
@@ -30,6 +38,10 @@ export function addKey (key) {
 export function setItem(key, value) {
 	addKey(key);
 	window.localStorage.setItem(key, JSON.stringify(value));
+}
+
+export function getItem (key) {
+	return JSON.parse(window.localStorage.getItem(key));
 }
 
 export function clear() {

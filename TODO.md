@@ -2,6 +2,8 @@ TODO
 ====================
 
 * React componentDidCatch/error handling
-* Change the problemScenario image so that it's smaller
-* Delete the 'plus' button on the problemScenario page
-* Move the compass closer to the center
+* Work on better formatting of the compass. Try flex-grow, shrink, basis, 50/50 split.
+* Change storage `clear()` function to loop over all keys and remove everything. Then remove the
+  `addkey()` function.
+* Auto-focus when a page has textbox, plus after clicking + on Ponderbox.
+* Sort the results page in numerical order.

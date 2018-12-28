@@ -1,15 +1,11 @@
 import React from "react";
-import NextPage from '../components/nextPage';
-import { getAll } from "../helpers/storage";
+import { getItem, getPonderboxKeys } from "../helpers/storage";
+import { SCENARIOS } from "../helpers/constants";
 
-export default (props) => {
-  let results = getAll().map((answer, idx) => {
-    return (
-      <p key={idx} className="resultItem">
-        {answer}
-      </p>
-    );
-  });
+export default props => {
+  const originalProblem = getItem("problemScenario_0");
+  const keyArray = getPonderboxKeys();
+  const allSectionResults = compileAllResults(keyArray);
 
   return (
     <main>
@@ -19,14 +15,76 @@ export default (props) => {
         save it.
       </p>
       <p>
-        Do not advance to the next page until you have saved your results or
-        they will be lost.
+        Please print out this page. If you have any issues, please ask Sammy.
       </p>
       <hr />
-			{results}
-			<NextPage gotoPage={() => {
-				props.goNextPage('thankYou');
-			}}>Continue</NextPage>
+      <h2>Original Problem Statement</h2>
+      <p>{originalProblem}</p>
+      {allSectionResults}
     </main>
   );
 };
+
+function compileAllResults(keyArray) {
+  // Each item in keyArray represents a single Ponderbox entry.
+  let headerId = "";
+  let prevHeaderId = "zzNoMatch";
+  let scenarioHeader = "";
+
+  let sectionId = "";
+  let prevSectionId = "zzNoMatch";
+  let sectionHeader = "";
+
+  return keyArray.map(key => {
+    const parsedKey = /(^s\d+)(p\d+)/.exec(key);
+    if (parsedKey && parsedKey.length === 3) {
+      headerId = parsedKey[1];
+      sectionId = parsedKey[2];
+    } else {
+      prevHeaderId = "unknown";
+      prevSectionId = "unknown";
+    }
+
+    // Print Scenario header if needed.
+    if (headerId !== prevHeaderId) {
+      scenarioHeader = <h2>{getScenarioHeader(headerId)}</h2>;
+    } else {
+      scenarioHeader = null;
+    }
+
+    // Print section header if needed.
+    if (sectionId !== prevSectionId) {
+      sectionHeader = <h3>{getSectionHeader(sectionId)}</h3>;
+    } else {
+      sectionHeader = null;
+    }
+
+    prevHeaderId = headerId;
+    prevSectionId = sectionId;
+    return (
+      <React.Fragment key={key}>
+        {scenarioHeader}
+        <div style={{ paddingLeft: "2em" }}>
+          {sectionHeader}
+          <p>{getItem(key)}</p>
+        </div>
+      </React.Fragment>
+    );
+  });
+}
+
+function getScenarioHeader(headerId) {
+  const headerNumber = parseInt(/\d+/.exec(headerId)[0], 10);
+  const headerName = SCENARIOS[headerNumber].name;
+  return headerName;
+}
+
+function getSectionHeader(sectionId) {
+  if (sectionId === "p4") {
+    return "Section A";
+  }
+  if (sectionId === "p6") {
+    return "Section B";
+  }
+  return "Other Section";
+}
