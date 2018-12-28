@@ -13,7 +13,7 @@ function Overview(props) {
         <p>
           <em>
             What are the needs, tasks, and environments of the people to{" "}
-            <strong>design a playground</strong>. What are the characteristics
+            <strong>design a playground</strong>? What are the characteristics
             and attributes of the people using the <strong>playground</strong>?{" "}
           </em>
         </p>
