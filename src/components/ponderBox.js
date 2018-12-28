@@ -24,28 +24,29 @@ class PonderBox extends React.Component {
   }
 
   render() {
-    const textareas = this.state.contents.map((contentsObj, idx) => {
-      return (
-        <TextArea
-          key={`${this.props.storageKey}_${idx}`}
-          id={`${this.props.storageKey}_${idx}`}
-          doneEditing={this.save}
-          contents={contentsObj.value}
-        />
-      );
-    });
+    const textareas = this.state.contents.map((contentsObj, idx) => (
+      <TextArea
+        key={`${this.props.storageKey}_${idx}`}
+        id={`${this.props.storageKey}_${idx}`}
+        doneEditing={this.save}
+        contents={contentsObj.value}
+      />
+    ));
+
     return (
       <React.Fragment>
         {textareas}
-        <p>
-          <button
-            className="themed"
-            style={{ width: "2em" }}
-            onClick={this.addPonder}
-          >
-            ✚
-          </button>
-        </p>
+        {this.props.allowAdditional && (
+          <p>
+            <button
+              className="themed"
+              style={{ width: "2em" }}
+              onClick={this.addPonder}
+            >
+              ✚
+            </button>
+          </p>
+        )}
       </React.Fragment>
     );
   }
@@ -64,8 +65,13 @@ class PonderBox extends React.Component {
   };
 }
 
+PonderBox.defaultProps = {
+  allowAdditional: true
+};
+
 PonderBox.propTypes = {
-  storageKey: PropTypes.string.isRequired
+  storageKey: PropTypes.string.isRequired,
+  allowAdditional: PropTypes.bool
 };
 
 export default PonderBox;
