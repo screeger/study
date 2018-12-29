@@ -27,16 +27,7 @@ export function getForPage(storageId) {
 	return entries;
 }
 
-export function addKey (key) {
-	const keyArray = JSON.parse(window.localStorage.getItem('keyList'));
-	if (!keyArray.find(elem => elem === key)) {
-		keyArray.push(key);
-		window.localStorage.setItem('keyList', JSON.stringify(keyArray));
-	}
-}
-
 export function setItem(key, value) {
-	addKey(key);
 	window.localStorage.setItem(key, JSON.stringify(value));
 }
 
@@ -45,9 +36,5 @@ export function getItem (key) {
 }
 
 export function clear() {
-	const keyArray = JSON.parse(window.localStorage.getItem('keyList')) || [];
-	keyArray.forEach(key => {
-		window.localStorage.removeItem(key);
-	});
-	window.localStorage.setItem('keyList', JSON.stringify([]));
+	window.localStorage.clear();
 }

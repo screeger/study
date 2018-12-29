@@ -2,7 +2,5 @@ TODO
 ====================
 
 * React componentDidCatch/error handling
-* Change storage `clear()` function to loop over all keys and remove everything. Then remove the
-  `addkey()` function.
 * Auto-focus when a page has textbox, plus after clicking + on Ponderbox.
 * Sort the results page in numerical order.
