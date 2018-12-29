@@ -10,7 +10,23 @@ export function getPonderboxKeys () {
 			ponderKeys.push(storage.key(i));
 		}
 	}
-	ponderKeys.sort();
+	ponderKeys.sort((a, b) => {
+		const parsedA = /s(\d+)p(\d+)/.exec(a);
+		const parsedB = /s(\d+)p(\d+)/.exec(b);
+		if (parseInt(parsedA[1],10) < parseInt(parsedB[1],10)) {
+			return -1;
+		}
+		if (parseInt(parsedA[1],10) > parseInt(parsedB[1],10)) {
+			return 1;
+		}
+		if (parseInt(parsedA[2],10) < parseInt(parsedB[2],10)) {
+			return -1;
+		}
+		if (parseInt(parsedA[2],10) > parseInt(parsedB[2],10)) {
+			return 1;
+		}
+		return 0;
+	});
 	return ponderKeys;
 }
 
