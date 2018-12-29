@@ -40,10 +40,11 @@ h3 {
   justify-content: flex-end;
 }
 .compassLayout div:first-child {
-  flex-basis: 400px;
+  flex: 1 1 400px;
 }
 .compassLayout div:last-child {
-  padding-right: 10%;
+  flex: 1 2 400px;
+  padding-right: 1.5em;
 }
 button.themed {
   background-color: #e5cb2c;
