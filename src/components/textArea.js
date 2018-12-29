@@ -6,20 +6,24 @@ class TextArea extends React.Component {
     super(props);
     this.placeholderText = "Enter your thoughts here...";
     this.state = {
-      contents: this.props.contents || ''
+      contents: this.props.contents || ""
     };
+    this.refTextarea = React.createRef();
+  }
+
+  componentDidMount() {
+    this.refTextarea.current.focus();
   }
 
   render() {
     return (
-      <React.Fragment>
-        <textarea
-          value={this.state.contents}
-          onChange={this.textChanged}
-          onBlur={this.blurredTextbox}
-          placeholder={this.placeholderText}
-        />
-      </React.Fragment>
+      <textarea
+        value={this.state.contents}
+        onChange={this.textChanged}
+        onBlur={this.blurredTextbox}
+        placeholder={this.placeholderText}
+        ref={this.refTextarea}
+      />
     );
   }
 
