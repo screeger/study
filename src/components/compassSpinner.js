@@ -15,6 +15,33 @@ class RandomSpinner extends React.Component {
     this.slot = 0;
   }
 
+  render() {
+    return (
+      <button
+        onClick={this.onSpin}
+        className="compass"
+        ref={this.refCompass}
+        disabled={this.state.disabled}
+      >
+        <span
+          className={`compassDial ${this.state.isSpinning && "isSpinning"}`}
+          style={
+            this.state.isSpinning
+              ? {
+                  transform: `rotate(${this.slot}turn)`
+                }
+              : {}
+          }
+        />
+      </button>
+    );
+  }
+
+  componentWillUnmount () {
+    window.clearTimeout(this.timeout);
+    window.removeEventListener("keypress", this.listenForNumbers);
+  }
+
   onSpin = () => {
     this.keyStack = [];
     window.addEventListener("keypress", this.listenForNumbers);
@@ -52,34 +79,10 @@ class RandomSpinner extends React.Component {
     return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
   };
 
-  render() {
-    return (
-      <button
-        onClick={this.onSpin}
-        className="compass"
-        ref={this.refCompass}
-        disabled={this.state.disabled}
-      >
-        <span
-          className={`compassDial ${this.state.isSpinning && "isSpinning"}`}
-          style={
-            this.state.isSpinning
-              ? {
-                  transform: `rotate(${this.slot}turn)`
-                }
-              : {}
-          }
-        />
-      </button>
-    );
-  }
-
   listenForNumbers = evt => {
     if (evt.which > 47 && evt.which < 58) {
       this.keyStack.push(evt.key);
       if (this.keyStack.length > 1) {
-        window.clearTimeout(this.timeout);
-        window.removeEventListener("keypress", this.listenForNumbers);
         this.props.hasBeenChoosen(parseInt(this.keyStack.join(""), 10));
         this.props.finishedAnimation();
       }
