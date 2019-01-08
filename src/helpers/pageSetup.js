@@ -34,5 +34,5 @@ function getArrayOfScenarios(group) {
   return SCENARIOS.map((item, idx) => {
     item.id = idx;
     return item;
-  }).filter(item => group === "all" || item.group === group);
+  }).filter(item => (group === "all" && item.id > 0) || item.group === group);
 }

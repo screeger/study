@@ -12,6 +12,13 @@ class Compass extends React.Component {
       finishedAnimation: false
     };
   }
+
+  componentDidUpdate (prevProps, prevState) {
+    if (this.state.scenario && !prevState.scenario) {
+      document.getElementById('nextPageBtn').focus();
+    }
+  }
+
   render() {
     return (
       <main>
