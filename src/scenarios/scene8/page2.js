@@ -16,11 +16,11 @@ function Page(props) {
         />
         <h1>Design a product that carries hot beverages</h1>
         <h2>Consider 1</h2>
-        <p>...</p>
+        <p>Keep the beverage warm for an extended time</p>
         <h2>Consider 2</h2>
-        <p>...</p>
+        <p>Not burn the user's hand</p>
         <h2>Consider 3</h2>
-        <p>...</p>
+        <p>Liquid-tight seal</p>
       </main>
     </React.Fragment>
   );

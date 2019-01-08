@@ -20,7 +20,7 @@ function Overview(props) {
         <ul>
           <li>Describe the problem you're solving for</li>
           <li>Why is it useful?</li>
-          <li>...?</li>
+          <li>What is the impact of this issue?</li>
           
         </ul>
       </main>

@@ -16,11 +16,11 @@ function Page(props) {
         />
         <h1>Design the user experience of an airport</h1>
         <h2>Consider 1</h2>
-        <p>... </p>
+        <p>Maps for easy navigation </p>
         <h2>Consider 2</h2>
-        <p>...</p>
+        <p>Well-lit, easily accessible signs for bathrooms</p>
         <h2>Consider 3</h2>
-        <p>...</p>
+        <p>Wide pathways for many people to traverse</p>
       </main>
     </React.Fragment>
   );

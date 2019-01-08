@@ -18,9 +18,9 @@ function Page(props) {
         <h2>Consider 1</h2>
         <p>How does it help the kid learn?</p>
         <h2>Consider 2</h2>
-        <p>Is is easy for their cognitive abilities?</p>
+        <p>Is is suitable for their cognitive abilities?</p>
         <h2>Consider 3</h2>
-        <p>...</p>
+        <p>Is it safe but fun for the kid to use?</p>
       </main>
     </React.Fragment>
   );

@@ -14,13 +14,13 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>????</h1>
+        <h1>Design a camera when using on vacation</h1>
         <h2>Consider 1</h2>
-        <p>FIX THIS </p>
+        <p>How could a teenager enjoy taking photos?</p>
         <h2>Consider 2</h2>
-        <p>FIX THIS</p>
+        <p>What about an eldery adult?</p>
         <h2>Consider 3</h2>
-        <p>FIX THIS</p>
+        <p>Or a professional photographer?</p>
       </main>
     </React.Fragment>
   );

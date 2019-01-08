@@ -16,11 +16,11 @@ function Page(props) {
         />
         <h1>Design a shelter for sleeping outdoors.</h1>
         <h2>Consider 1</h2>
-        <p>FIX THIS </p>
+        <p>User needs the process to be fast and easy.</p>
         <h2>Consider 2</h2>
-        <p>FIX THIS</p>
+        <p>User has never camped outdoors before.</p>
         <h2>Consider 3</h2>
-        <p>FIX THIS</p>
+        <p>User is an Eagle Scout. </p>
       </main>
     </React.Fragment>
   );

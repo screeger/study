@@ -16,11 +16,11 @@ function Page(props) {
         />
         <h1>Design a way to travel around the city faster</h1>
         <h2>Consider 1</h2>
-        <p>Scooter, roller blades, skateboard</p>
+        <p>Scooter</p>
         <h2>Consider 2</h2>
-        <p></p>
+        <p>Roller blades</p>
         <h2>Consider 3</h2>
-        <p>...</p>
+        <p>Skateboard/longboard</p>
       </main>
     </React.Fragment>
   );

@@ -16,11 +16,11 @@ function Page(props) {
         />
         <h1>Design a handcrank flashlight</h1>
         <h2>Consider 1</h2>
-        <p>No electricity</p>
+        <p>No access to electricity</p>
         <h2>Consider 2</h2>
-        <p>...</p>
+        <p>Power is out</p>
         <h2>Consider 3</h2>
-        <p>...</p>
+        <p>Located in non-sunny region</p>
       </main>
     </React.Fragment>
   );

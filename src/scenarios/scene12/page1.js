@@ -14,13 +14,13 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design a </h1>
+        <h1>Design a thermal jacket</h1>
         <h2>Consider 1</h2>
-        <p>...</p>
+        <p>Create tests to confirm jacket can keep user warm in negative degree weather</p>
         <h2>Consider 2</h2>
-        <p>...</p>
+        <p>Provide lifetime service if jacket is damaged</p>
         <h2>Consider 3</h2>
-        <p>...</p>
+        <p>Ensure zippers and pockets are functioning</p>
       </main>
     </React.Fragment>
   );

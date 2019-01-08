@@ -18,10 +18,10 @@ function Overview(props) {
 
         <p>Here are some thought starters:</p>
         <ul>
-          <li>FIX</li>
-          <li>FIX</li>
-          <li>FIX</li>
-          <li>FIX</li>
+          <li>Who else can benefit?</li>
+          <li>Think about minority groups.</li>
+          <li>Expand your target group beyond the obvious.</li>
+        
         </ul>
       </main>
     </React.Fragment>

@@ -16,11 +16,11 @@ function Page(props) {
         />
         <h1>Design a dog travel crate</h1>
         <h2>Consider 1</h2>
-        <p>... </p>
+        <p>Keep the dog safe and comfortable </p>
         <h2>Consider 2</h2>
-        <p>...</p>
+        <p>Avoid the dog from escaping</p>
         <h2>Consider 3</h2>
-        <p>...</p>
+        <p>Safely transport dog from point A to B</p>
       </main>
     </React.Fragment>
   );

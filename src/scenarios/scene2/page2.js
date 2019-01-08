@@ -16,11 +16,11 @@ function Page(props) {
         />
         <h1>Design an event that educates on climate change</h1>
         <h2>Consider 1</h2>
-        <p>How to attract...FIX THIS </p>
+        <p>How to attract high school students to be engaged. </p>
         <h2>Consider 2</h2>
-        <p>FIX THIS</p>
+        <p>Encourage young families to attend.</p>
         <h2>Consider 3</h2>
-        <p>FIX THIS</p>
+        <p>Invite CEOs of businesses</p>
       </main>
     </React.Fragment>
   );
