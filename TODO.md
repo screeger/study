@@ -2,8 +2,6 @@ TODO
 ====================
 
 * React componentDidCatch/error handling
-* Set a max width for the pages.
-* Create a lead-in (page 1). The next button will be centered/styled differently.
 * Implement a Back button
 * Add text next to the (+) ponderbox button.
 * On Compass page, show Strategy 1 of 3, etc.
