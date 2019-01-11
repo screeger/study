@@ -41,10 +41,10 @@ class PonderBox extends React.Component {
             <button
               className="themed"
               style={{ width: "2em" }}
-              onClick={this.addPonder}
-            >
+              onClick={this.addPonder}>
               ✚
-            </button>
+            </button>{" "}
+            Additional problem statement
           </p>
         )}
       </React.Fragment>

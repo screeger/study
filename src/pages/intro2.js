@@ -1,4 +1,5 @@
 import React from "react";
+import PrevPage from "../components/prevPage";
 import NextPage from "../components/nextPage";
 
 export default (props) => {
@@ -17,6 +18,9 @@ export default (props) => {
 				that can ultimately steer your problem in the right direction.</p>
 			<p>Follow the instructions on each page as you discover each new strategy.</p>
 			<p>If you have any questions during this time, please ask Sammy.</p>
+			<PrevPage gotoPage={() => {
+				props.goNextPage('intro1');
+			}}>Back</PrevPage>
 			<NextPage gotoPage={() => {
 				props.goNextPage('problemScenario');
 			}}>Continue</NextPage>

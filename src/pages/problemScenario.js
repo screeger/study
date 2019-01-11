@@ -1,4 +1,5 @@
 import React from "react";
+import PrevPage from "../components/prevPage";
 import NextPage from "../components/nextPage";
 import bkgdImg from "../images/park-design-small.jpg";
 import { clear } from "../helpers/storage";
@@ -20,36 +21,36 @@ export default props => {
           backgroundRepeat: "no-repeat",
           minHeight: "427px",
           paddingRight: "45%"
-        }}
-      >
+        }}>
         <div
           style={{
             backgroundColor: "rgba(255, 255, 255, 0.7)",
             padding: "0.5em 1em 1em 0"
-          }}
-        >
+          }}>
           <p>
             A city resident has recently donated a corner lot for a playground.
             You are an engineer who lives in the neighborhood, and you have been
             asked by the city to help with the project. Your task is to design
             playground equipment for the lot using locally sourced materials
-            that are able to withstand outdoor conditions all year long.{" "}
+            that are able to withstand outdoor conditions all year long.
           </p>
           <p style={{ marginTop: "4em" }}>
-            In the space below, please write a problem statement that refelcts
+            In the space below, please write a problem statement that reflects
             the problem scenario above.
           </p>
-          <PonderBox
-            storageKey="problemScenario"
-            allowAdditional={false}
-          />
+          <PonderBox storageKey="problemScenario" allowAdditional={false} />
         </div>
       </section>
+      <PrevPage
+        gotoPage={() => {
+          props.goNextPage("intro2");
+        }}>
+        Back
+      </PrevPage>
       <NextPage
         gotoPage={() => {
           props.goNextPage("compass");
-        }}
-      >
+        }}>
         Continue
       </NextPage>
     </main>

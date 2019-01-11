@@ -1,0 +1,28 @@
+.prevPage {
+	border: none;
+	background-color: transparent;
+	position: fixed;
+	bottom: 1em;
+	right: 10em;
+}
+.prevPage[disabled] {
+	display: none;
+}
+.prevPage span:last-child {
+	color: white;
+	font-weight: bold;
+	display: inline-block;
+	background-color: #e5cb2c;
+	padding: 5px 10px;
+	height: 26px;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+.prevPage span:first-child {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-right: 9px solid #e5cb2c;
+	border-top: 13px solid transparent;
+	border-bottom: 13px solid transparent;
+}
