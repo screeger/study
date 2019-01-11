@@ -4,7 +4,7 @@ import PonderBox from "../../components/ponderBox";
 export default props => {
   return (
     <main>
-      <h1>Page 4 Ponder Box</h1>
+      <h1>Problem Statement Part One</h1>
       <div className="ponderLayout">
         <section>
           <p>

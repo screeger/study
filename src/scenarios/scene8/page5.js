@@ -19,7 +19,7 @@ class TimerPage extends React.Component {
     );
     return (
       <main>
-        <h1 style={{ marginBottom: "3em" }}>Isn’t this timer just adorbs?</h1>
+        <h1 style={{ marginBottom: "3em" }}>Solution Generation</h1>
         <p>
           Take 5 minutes to generate as many concepts as you can based on the new problem statements you previously generated.
         </p>

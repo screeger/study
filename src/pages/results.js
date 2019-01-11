@@ -1,6 +1,7 @@
 import React from "react";
 import { getItem, getPonderboxKeys } from "../helpers/storage";
 import { SCENARIOS } from "../helpers/constants";
+import Ponderbox from '../components/ponderBox';
 
 export default props => {
   const originalProblem = getItem("problemScenario_0");
@@ -17,6 +18,10 @@ export default props => {
       <p>
         Please print out this page. If you have any issues, please ask Sammy.
       </p>
+      <p>click your answers below to edit</p>
+      <hr />
+      <p>Please feedback about your experience.</p>
+      <Ponderbox allowAdditional={false} />
       <hr />
       <h2>Original Problem Statement</h2>
       <p>{originalProblem}</p>
@@ -66,7 +71,7 @@ function compileAllResults(keyArray) {
         {scenarioHeader}
         <div style={{ paddingLeft: "2em" }}>
           {sectionHeader}
-          <p>{getItem(key)}</p>
+          <p contentEditable>{getItem(key)}</p>
         </div>
       </React.Fragment>
     );
