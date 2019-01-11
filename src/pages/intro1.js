@@ -8,6 +8,11 @@ export default props => {
         <p>What’s shakin’?</p>
         <p>
           <button
+            style={{
+              width: '8em',
+              height: '3em',
+              fontSize: 'larger'
+            }}
             onClick={() => {
               props.goNextPage("intro2");
             }}>

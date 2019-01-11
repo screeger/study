@@ -11,6 +11,7 @@ class Compass extends React.Component {
       scenario: null, // scenario Id [1-12]
       finishedAnimation: false
     };
+    this.progress = 4 - this.props.availableScenarios.length;
   }
 
   componentDidUpdate (prevProps, prevState) {
@@ -33,6 +34,7 @@ class Compass extends React.Component {
             />
           </div>
           <div>
+            <h2>Scenario {this.progress} of 3</h2>
             <p
               style={{
                 marginBottom: "4em"
