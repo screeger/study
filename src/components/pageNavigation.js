@@ -2,10 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 class PageNavigation extends React.Component {
-  constructor(props) {
-    super(props);
-    this.className = props.className || "nextPage";
-  }
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.disabled && !this.props.disabled) {
       document.getElementById("nextPageBtn").focus();
@@ -13,11 +9,12 @@ class PageNavigation extends React.Component {
   }
 
   render() {
+    const { gotoPage, direction, disabled, children } = this.props;
     let kids;
-    if (this.className === "nextPage") {
+    if (direction === "next") {
       kids = (
         <React.Fragment>
-          <span>{this.props.children}</span>
+          <span>{children}</span>
           <span />
         </React.Fragment>
       );
@@ -25,16 +22,16 @@ class PageNavigation extends React.Component {
       kids = (
         <React.Fragment>
           <span />
-          <span>{this.props.children}</span>
+          <span>{children}</span>
         </React.Fragment>
       );
     }
     return (
       <button
         id="nextPageBtn"
-        className={this.className}
-        onClick={this.props.gotoPage}
-        disabled={this.props.disabled}>
+        className={direction === 'next' ? 'nextPage' : 'prevPage'}
+        onClick={gotoPage}
+        disabled={disabled}>
         {kids}
       </button>
     );
@@ -42,6 +39,7 @@ class PageNavigation extends React.Component {
 }
 PageNavigation.propTypes = {
   gotoPage: PropTypes.func.isRequired,
+  direction: PropTypes.string,
   disabled: PropTypes.bool
 };
 

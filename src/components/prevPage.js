@@ -1,10 +1,11 @@
+import React from 'react';
 import PageNavigation from "./pageNavigation";
 
 import "./prevPage.css";
 
 class PrevPage extends PageNavigation {
-  constructor(props) {
-    super({ className: "prevPage", ...props });
+  render () {
+    return <PageNavigation direction="prev" {...this.props} />
   }
 }
 
