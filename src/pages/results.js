@@ -21,7 +21,7 @@ export default props => {
       <p>click your answers below to edit</p>
       <hr />
       <p>Please feedback about your experience.</p>
-      <Ponderbox allowAdditional={false} />
+      <Ponderbox allowAdditional={false} placeholder="" storageKey="results" />
       <hr />
       <h2>Original Problem Statement</h2>
       <p>{originalProblem}</p>

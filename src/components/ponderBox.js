@@ -30,6 +30,7 @@ class PonderBox extends React.Component {
         id={`${this.props.storageKey}_${idx}`}
         doneEditing={this.save}
         contents={contentsObj.value}
+        placeholder={this.props.placeholder}
       />
     ));
 
@@ -71,7 +72,8 @@ PonderBox.defaultProps = {
 
 PonderBox.propTypes = {
   storageKey: PropTypes.string.isRequired,
-  allowAdditional: PropTypes.bool
+  allowAdditional: PropTypes.bool,
+  placeholder: PropTypes.string
 };
 
 export default PonderBox;

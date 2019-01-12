@@ -16,12 +16,15 @@ class Question extends React.Component {
     this.refTimer = React.createRef();
   }
   componentDidMount () {
-    window.setTimeout(() => {
+    this.timeout = window.setTimeout(() => {
       this.props.onDing();
-    }, 0.25 * 60 * 1000)
+    }, 2.5 * 60 * 1000) // 2.5 minutes to show Next button
   }
   componentWillUnmount () {
     this.keyListen.remove();
+    window.clearTimeout(this.timeout);
+    window.clearInterval(this.interval);
+
   }
   render() {
     let btnText = "Begin Timer";
