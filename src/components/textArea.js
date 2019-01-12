@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 class TextArea extends React.Component {
   constructor(props) {
     super(props);
-    this.placeholderText = "Enter your thoughts here...";
+    this.placeholderText = "How might we...";
     this.state = {
       contents: this.props.contents || ""
     };
