@@ -15,6 +15,11 @@ class Question extends React.Component {
     this.keyListen = new KeystrokeListener("sam", this.timerDone);
     this.refTimer = React.createRef();
   }
+  componentDidMount () {
+    window.setTimeout(() => {
+      this.props.onDing();
+    }, 0.25 * 60 * 1000)
+  }
   componentWillUnmount () {
     this.keyListen.remove();
   }

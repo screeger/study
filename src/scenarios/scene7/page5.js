@@ -14,7 +14,7 @@ class TimerPage extends React.Component {
   render() {
     const doneMessage = (
       <p style={{ textAlign: "center" }}>
-        Put your pencils down. Press the Next Page button to continue.
+        
       </p>
     );
     return (
