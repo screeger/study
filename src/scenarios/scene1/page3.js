@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h1>Design an online platform that plays music</h1>
-        <h2>Consider 1</h2>
+        <h2>Consideration 1</h2>
         <p>How to easily acclimate someone new to this platform. </p>
-        <h2>Consider 2</h2>
+        <h2>Consideration 2</h2>
         <p>How to allow someone to discover new music.</p>
-        <h2>Consider 3</h2>
+        <h2>Consideration 3</h2>
         <p>User wants to listen to music without using up cellular data.</p>
       </main>
     </React.Fragment>

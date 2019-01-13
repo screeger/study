@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h1>Design a vehicle that transports you from point A to point B</h1>
-        <h2>Consider 1</h2>
+        <h2>Consideration 1</h2>
         <p>A cultural group akin to Harley Davidson loyalists would have a particular bias towards the vehicle.</p>
-        <h2>Consider 2</h2>
+        <h2>Consideration 2</h2>
         <p>If the government subsidizes electric vehicles, a stronger emphasizing for designing environmentaly friendly vehicles is a priority.</p>
-        <h2>Consider 3</h2>
+        <h2>Consideration 3</h2>
         <p>Gas mileage and safety are cultural components that need to be considered.</p>
       </main>
     </React.Fragment>

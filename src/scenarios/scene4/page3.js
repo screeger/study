@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h1>Design a medical device for patients with diabetes</h1>
-        <h2>Consider 1</h2>
+        <h2>Consideration 1</h2>
         <p>What devices are currently on the market? </p>
-        <h2>Consider 2</h2>
+        <h2>Consideration 2</h2>
         <p>Identify products that are successful but need improvement.</p>
-        <h2>Consider 3</h2>
+        <h2>Consideration 3</h2>
         <p>What ways can you make it more user friendly?</p>
       </main>
     </React.Fragment>

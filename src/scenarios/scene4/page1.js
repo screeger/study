@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h1>Design adhesive paper for note-taking</h1>
-        <h2>Consider 1</h2>
+        <h2>Consideration 1</h2>
         <p>Study how burrs attach to objects in nature </p>
-        <h2>Consider 2</h2>
+        <h2>Consideration 2</h2>
         <p>Study how lizards easily climb up and around obstacles</p>
-        <h2>Consider 3</h2>
+        <h2>Consideration 3</h2>
         <p>What are pros/cons of adhesive paper already on the market?</p>
       </main>
     </React.Fragment>

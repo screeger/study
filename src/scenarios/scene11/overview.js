@@ -12,7 +12,7 @@ function Overview(props) {
       <main>
         <p>
           <em>
-          How do the mobility features or concerns affect the problem? 
+          How do the mobility features or concerns affect <strong>the playground</strong>? 
           </em>
         </p>
 

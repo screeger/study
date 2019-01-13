@@ -15,12 +15,12 @@ function Page(props) {
           color={props.color}
         />
         <h1>Design farm equipment to haul material</h1>
-        <h2>Consider 1</h2>
-        <p>...</p>
-        <h2>Consider 2</h2>
-        <p>...</p>
-        <h2>Consider 3</h2>
-        <p>...</p>
+        <h2>Consideration 1</h2>
+        <p>Test that it can withstand all seasons</p>
+        <h2>Consideration 2</h2>
+        <p>Provide safety guards around all blades</p>
+        <h2>Consideration 3</h2>
+        <p>Display safety notifications for maintenance issues (oil changes)</p>
       </main>
     </React.Fragment>
   );

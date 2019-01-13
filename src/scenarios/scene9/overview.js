@@ -12,15 +12,15 @@ function Overview(props) {
       <main>
         <p>
           <em>
-          What are the items or actions that are already known to be true?
+          What are the items or actions that are already known to be true for the <strong>design of the playground</strong>?
           How can you challenge them?
-          How can you narrow the scope of the intended function? 
+          How can you narrow the scope of the <strong>playground</strong>? 
           </em>
         </p>
 
         <p>Here are some thought starters:</p>
         <ul>
-          <li>Are there budget constraints</li>
+          <li>Are there budget constraints?</li>
           <li>What’s the cost of the design, fabrication, etc?</li>
           <li>What criteria is already guaranteed for the project?</li>
           

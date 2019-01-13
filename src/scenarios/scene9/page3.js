@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h1>Design the user experience of an airport</h1>
-        <h2>Consider 1</h2>
+        <h2>Consideration 1</h2>
         <p>Maps for easy navigation </p>
-        <h2>Consider 2</h2>
+        <h2>Consideration 2</h2>
         <p>Well-lit, easily accessible signs for bathrooms</p>
-        <h2>Consider 3</h2>
+        <h2>Consideration 3</h2>
         <p>Wide pathways for many people to traverse</p>
       </main>
     </React.Fragment>

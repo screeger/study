@@ -3,7 +3,7 @@ export const FREE_ROTATIONS = 9; // Number of times the compass rotates before p
 export const SCENARIOS = [
   { retain: "leave this here" },
   {
-    name: "1 – Describe the Characteristics and Needs of the Stakeholders",
+    name: "1 – Describe the Characteristics of the User and their Needs",
     color: "#870230",
     group: "a"
   },

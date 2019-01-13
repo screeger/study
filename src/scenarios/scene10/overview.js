@@ -12,7 +12,7 @@ function Overview(props) {
       <main>
         <p>
           <em>
-          Does the design of the product solve the right problem at the right level?
+          Does the design of <strong>the playground</strong> solve the right problem at the right level?
           </em>
         </p>
 

@@ -8,7 +8,7 @@ export default props => {
       <div className="ponderLayout">
         <section>
           <p>
-          Enter an alternative problem statement using this strategy relating to the playground.
+          Now that you've learned about this strategy, please state a new problem statement by including information from this particular strategy. Enter as many additional problem statements as you can think of.
 
           </p>
           <p>&nbsp;</p>
@@ -16,7 +16,7 @@ export default props => {
         </section>
         <section>
           <h2>Strategy:</h2>
-          <p>Describe the Characteristics and Needs of the Stakeholders</p>
+          <p>Describe the Characteristics of the User and their Needs</p>
           <h2>Scenario:</h2>
           <p>
           A city resident has recently donated a corner lot for a playground. You are an engineer who lives in the neighborhood, and you have been asked by the city to help with the project. Your task is to design playground equipment for the lot using locally sourced materials that are able to withstand outdoor conditions all year long.

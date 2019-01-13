@@ -40,7 +40,7 @@ class Compass extends React.Component {
                 marginBottom: "4em"
               }}
             >
-              Press the button to receive a random strategy.
+              This compass contains all 12 strategies for you to discover. Press the compass to receive a random strategy.
             </p>
             {this.state.scenario && this.state.finishedAnimation && (
               <React.Fragment>

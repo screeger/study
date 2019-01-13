@@ -27,12 +27,13 @@ export default props => {
             backgroundColor: "rgba(255, 255, 255, 0.7)",
             padding: "0.5em 1em 1em 0"
           }}>
+          <p>Below is the scenario you will use for all 3 strategies:</p>
           <p>
-            A city resident has recently donated a corner lot for a playground.
+            <em>A city resident has recently donated a corner lot for a playground.
             You are an engineer who lives in the neighborhood, and you have been
             asked by the city to help with the project. Your task is to design
             playground equipment for the lot using locally sourced materials
-            that are able to withstand outdoor conditions all year long.
+            that are able to withstand outdoor conditions all year long.</em>
           </p>
           <p style={{ marginTop: "4em" }}>
             In the space below, please write a problem statement that reflects

@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h1>Design a camera when using on vacation</h1>
-        <h2>Consider 1</h2>
+        <h2>Consideration 1</h2>
         <p>How could a teenager enjoy taking photos?</p>
-        <h2>Consider 2</h2>
+        <h2>Consideration 2</h2>
         <p>What about an eldery adult?</p>
-        <h2>Consider 3</h2>
+        <h2>Consideration 3</h2>
         <p>Or a professional photographer?</p>
       </main>
     </React.Fragment>

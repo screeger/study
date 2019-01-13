@@ -8,7 +8,7 @@ export default props => {
       <div className="ponderLayout">
         <section>
           <p>
-          Now that you have completed new concepts, enter new problem statements that would help inform your concept.
+          Now that you've generated new concepts, generate a new problem statement based on your sketched ideas. Enter as many additional problem statements as you can think of.
           </p>
           <p>&nbsp;</p>
           <PonderBox storageKey={`s${props.id}p${props.pageNbr}`} />

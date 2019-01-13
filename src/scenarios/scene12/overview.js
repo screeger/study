@@ -12,7 +12,7 @@ function Overview(props) {
       <main>
         <p>
           <em>
-          How will the product be tested during design and fabrication?
+          How will <strong>the playground</strong> be tested during design and fabrication?
           To what extent of testing is needed?
           What kinds of tests are needed? 
           </em>
@@ -20,8 +20,8 @@ function Overview(props) {
 
         <p>Here are some thought starters:</p>
         <ul>
-          <li>...</li>
-          <li>...</li>
+          <li>What components are prone to breaking?</li>
+          <li>How can the user maintain the product?</li>
           <li>What regulatory bodies oversee such testing?</li>
           
         </ul>

@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h1>Design a garment that protects from extreme outdoor elements</h1>
-        <h2>Consider 1</h2>
+        <h2>Consideration 1</h2>
         <p>Look into high end fashion examples as inspiration</p>
-        <h2>Consider 2</h2>
+        <h2>Consideration 2</h2>
         <p>How to spiders weave strong webs?</p>
-        <h2>Consider 3</h2>
+        <h2>Consideration 3</h2>
         <p>Study animals that live in extreme conditions</p>
       </main>
     </React.Fragment>

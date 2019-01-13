@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h1>Design an event that educates on climate change</h1>
-        <h2>Consider 1</h2>
+        <h2>Consideration 1</h2>
         <p>How to attract high school students to be engaged. </p>
-        <h2>Consider 2</h2>
+        <h2>Consideration 2</h2>
         <p>Encourage young families to attend.</p>
-        <h2>Consider 3</h2>
+        <h2>Consideration 3</h2>
         <p>Invite CEOs of businesses</p>
       </main>
     </React.Fragment>
