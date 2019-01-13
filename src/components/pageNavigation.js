@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import './pageNavigation.css';
+
 class PageNavigation extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.disabled && !this.props.disabled) {
@@ -15,21 +17,19 @@ class PageNavigation extends React.Component {
       kids = (
         <React.Fragment>
           <span>{children}</span>
-          <span />
         </React.Fragment>
       );
     } else {
       kids = (
         <React.Fragment>
-          <span />
           <span>{children}</span>
         </React.Fragment>
       );
     }
     return (
       <button
-        id="nextPageBtn"
-        className={direction === 'next' ? 'nextPage' : 'prevPage'}
+        id={direction === 'next' ? 'nextPageBtn' : 'prevPageBtn'}
+        className={'pageNavigation ' + (direction === 'next' ? 'nextPage' : 'prevPage')}
         onClick={gotoPage}
         disabled={disabled}>
         {kids}

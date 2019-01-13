@@ -1,0 +1,20 @@
+.pageNavigation {
+	border: none;
+	background-color: transparent;
+	position: fixed;
+	bottom: 1em;
+}
+.pageNavigation[disabled] {
+	display: none;
+}
+.pageNavigation span {
+	color: white;
+	font-weight: bold;
+	display: inline-block;
+	background-color: #e5cb2c;
+	padding: 5px 10px;
+	height: 26px;
+	box-sizing: border-box;
+	vertical-align: top;
+	width: 7em;
+}

@@ -1,24 +1,8 @@
 .nextPage {
-	border: none;
-	background-color: transparent;
-	position: fixed;
-	bottom: 1em;
 	right: 2em;
 }
-.nextPage[disabled] {
-	display: none;
-}
-.nextPage span:first-child {
-	color: white;
-	font-weight: bold;
-	display: inline-block;
-	background-color: #e5cb2c;
-	padding: 5px 10px;
-	height: 26px;
-	box-sizing: border-box;
-	vertical-align: top;
-}
-.nextPage span:last-child {
+.nextPage:after {
+	content: '';
 	display: inline-block;
 	width: 0;
 	height: 0;
