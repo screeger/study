@@ -36,3 +36,11 @@ function getArrayOfScenarios(group) {
     return item;
   }).filter(item => (group === "all" && item.id > 0) || item.group === group);
 }
+
+export function setBkgd (imgUrl) {
+  document.getElementsByTagName('body')[0].setAttribute('style', `background-image: url('${imgUrl}'); background-size: cover; background-repeat: no-repeat`);
+}
+
+export function removeBkgd () {
+  document.getElementsByTagName('body')[0].removeAttribute('style');
+}
