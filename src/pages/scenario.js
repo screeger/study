@@ -53,9 +53,8 @@ class Scenario extends React.Component {
     const maxPage = Object.keys(this.props.scenario).reduce(
       (accum, current) => {
         // Look for pages and extract the number off it.
-        const matches = current.match(/(?<=page)\d+$/);
-        if (matches) {
-          const pageNbr = parseInt(matches[0], 10);
+        if (this.is_a_page(current)) {
+          const pageNbr = this.extractPageNbr(current);
           if (pageNbr > accum) {
             return pageNbr;
           }
@@ -65,9 +64,17 @@ class Scenario extends React.Component {
       },
       0
     );
-
     return this.state.currentPage === maxPage;
   };
+
+  is_a_page = (szPage) => {
+    return szPage.includes('page');
+  }
+
+  extractPageNbr = (szpage) => {
+    // At this point, we already know that szpage is 'pageXX' where XX is a number.
+    return parseInt(szpage.match(/\d+/)[0], 10);
+  }
 
   setBtnState = newState => {
     if (newState.hasOwnProperty("showNextBtn")) {

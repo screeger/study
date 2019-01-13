@@ -20,7 +20,7 @@ class intro1 extends React.Component {
             borderRadius: '3em'
           }}>
             <h2 style={{ fontSize: '2em' }}>Problem Solution Co-Evolution</h2>
-            <p>Strategy Generator</p>
+            <p style={{ fontSize: 'larger', fontWeight: 'bold' }}>Strategy Generator</p>
             <p style={{ marginTop: '3em' }}>
               <button
                 style={{
@@ -30,7 +30,8 @@ class intro1 extends React.Component {
                   position: "relative",
                   border: 'none',
                   backgroundColor: 'transparent',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  color: 'white'
                 }}
                 onClick={() => {
                   this.props.goNextPage("intro2");
@@ -39,7 +40,7 @@ class intro1 extends React.Component {
                     position: 'absolute',
                     height: 0,
                     width: "182px",
-                    borderBottom: "3em solid #DADADA",
+                    borderBottom: "3em solid #7f3f00",
                     borderLeft: '9px solid transparent',
                     borderRight: '9px solid transparent',
                     top: 0,
