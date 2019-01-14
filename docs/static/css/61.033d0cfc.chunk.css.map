@@ -1,0 +1,1 @@
+{"version":3,"sources":["/Users/craig/Sites/thesis/src/components/titleBlock.css"],"names":[],"mappings":"AAAA,YACC,iBAAmB,AACnB,gBAAiB,AACjB,UAAa,CACb","file":"61.033d0cfc.chunk.css","sourcesContent":[".titleBlock {\n\tpadding: 0.3em 1em;\n\tfont-size: 2.4em;\n\tcolor: white;\n}\n"]}
