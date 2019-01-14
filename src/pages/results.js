@@ -12,13 +12,12 @@ export default props => {
     <main>
       <h1>This is Results Page</h1>
       <p>
-        Below are the answers you entered. Print this page or “print” to PDF to
-        save it.
+        Below are the answers you entered for all 3 scenarios. 
       </p>
       <p>
-        Please print out this page. If you have any issues, please ask Sammy.
+        Please <strong>print</strong> out this page or "print" to PDF to save it. If you have any issues, please ask Sammy.
       </p>
-      <p>click your answers below to edit</p>
+      <p>Click your answers below to edit</p>
       <hr />
       <p>Please feedback about your experience.</p>
       <Ponderbox allowAdditional={false} placeholder="" storageKey="results" />

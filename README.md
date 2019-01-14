@@ -23,3 +23,4 @@ Tech Notes
 1. Open a terminal window (from VS Code is easiest)
 2. Type in command `npm run deploy`
 3. Once that is done, you should see the updates at: https://screeger.github.io/study/#a
+4. #results, #all, #a, #b, #c, #d
