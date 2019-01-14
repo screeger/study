@@ -12,6 +12,7 @@ POSC_Prototype.pdf
 
 # production
 /build
+/docs
 
 # misc
 .DS_Store
