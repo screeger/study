@@ -2,7 +2,7 @@
   "name": "thesis",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://screeger.github.io/thesis",
+  "homepage": "https://screeger.github.io/study",
   "dependencies": {
     "left-pad": "^1.3.0",
     "prop-types": "^15.6.2",
