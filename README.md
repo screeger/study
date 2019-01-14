@@ -14,12 +14,12 @@ Tech Notes
 
 ## Making code changes
 
-  1. Edit your source files
-	2. Save all files
-	3. Github fetch/push
+1. Edit your source files
+2. Save all files
+3. Github fetch/push
 
 ## Deploying latest changes to website
 
-  1. Open a terminal window (from VS Code is easiest)
-	2. Type in command `npm run deploy`
-	3. Once that is done, you should see the updates at: https://screeger.github.io/study/#a
+1. Open a terminal window (from VS Code is easiest)
+2. Type in command `npm run deploy`
+3. Once that is done, you should see the updates at: https://screeger.github.io/study/#a
