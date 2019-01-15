@@ -11,12 +11,16 @@ class Compass extends React.Component {
       scenario: null, // scenario Id [1-12]
       finishedAnimation: false
     };
-    this.progress = 4 - this.props.availableScenarios.length;
+    this.ofNbr = 12;
+    if (this.props.availableScenarios.length < 4) {
+      this.ofNbr = 3;
+    }
+    this.progress = this.ofNbr + 1 - this.props.availableScenarios.length;
   }
 
-  componentDidUpdate (prevProps, prevState) {
+  componentDidUpdate(prevProps, prevState) {
     if (this.state.scenario && !prevState.scenario) {
-      document.getElementById('nextPageBtn').focus();
+      document.getElementById("nextPageBtn").focus();
     }
   }
 
@@ -34,13 +38,15 @@ class Compass extends React.Component {
             />
           </div>
           <div>
-            <h2>Scenario {this.progress} of 3</h2>
+            <h2>
+              Scenario {this.progress} of {this.ofNbr}
+            </h2>
             <p
               style={{
                 marginBottom: "4em"
-              }}
-            >
-              This compass contains all 12 strategies for you to discover. Press the compass to receive a random strategy.
+              }}>
+              This compass contains all 12 strategies for you to discover. Press
+              the compass to receive a random strategy.
             </p>
             {this.state.scenario && this.state.finishedAnimation && (
               <React.Fragment>
@@ -52,11 +58,11 @@ class Compass extends React.Component {
                 <h2
                   style={{
                     padding: "1em",
-                    backgroundColor: constants.SCENARIOS[this.state.scenario].color,
+                    backgroundColor:
+                      constants.SCENARIOS[this.state.scenario].color,
                     color: "white",
                     textAlign: "center"
-                  }}
-                >
+                  }}>
                   {constants.SCENARIOS[this.state.scenario].name}
                 </h2>
               </React.Fragment>
@@ -67,8 +73,7 @@ class Compass extends React.Component {
           disabled={!this.state.scenario}
           gotoPage={() => {
             this.props.goNextPage("scenario");
-          }}
-        >
+          }}>
           Continue
         </NextPage>
       </main>
