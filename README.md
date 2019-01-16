@@ -24,3 +24,22 @@ Tech Notes
 2. Type in command `npm run deploy`
 3. Once that is done, you should see the updates at: https://screeger.github.io/study/#a
 4. #results, #all, #a, #b, #c, #d
+
+
+deleted color options:
+2D5DB2
+    color: "#9C6525",
+    color: "#9C5212",
+    color: "#5D74A8",
+    color: "#4D818C",
+    color: "#165F69",
+    color: "#C48A19",
+    color: "#960E0D",
+    color: "#A63737",
+
+
+
+
+
+
+

@@ -10,7 +10,7 @@ export default props => {
 
   return (
     <main>
-      <h1>This is Results Page</h1>
+      <h1>Results</h1>
       <p>
         Below are the answers you entered for all 3 scenarios. 
       </p>
