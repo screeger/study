@@ -27,7 +27,7 @@
   width: 1em;
   height: 1em;
   border-radius: 0.5em;
-  border: thin solid darkgoldenrod;
+  border: thin solid #870230;
   background-color: #ffed79;
   position: absolute;
   left: 50%;
@@ -40,7 +40,7 @@
 }
 .likertResponse>input:checked+.likertIndicator {
   border-width: 3px;
-  background-color: #ffe018;
+  background-color: #870230;
 }
 .visuallyHidden { 
   position: absolute; 
