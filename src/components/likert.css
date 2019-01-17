@@ -1,0 +1,51 @@
+.likertScale {
+	margin: 1em 0;
+}
+.likertBand {
+  display: flex;
+  padding-top: 1em;
+}
+.likertResponse {
+  flex: 1 1 5em;
+  text-align: center;
+  position: relative;
+}
+.likertLine {
+  display: inline-block;
+  width: 50%;
+  height: 4px;
+  border-top: 3px solid dimgray;
+}
+.likertResponse:first-child .likertLine:first-child {
+  visibility: hidden;
+}
+.likertResponse:last-child>.likertLine:nth-child(2) {
+  visibility: hidden;
+}
+.likertIndicator {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.5em;
+  border: thin solid darkgoldenrod;
+  background-color: #ffed79;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  box-sizing: border-box;
+}
+.likertResponse:hover .likertIndicator {
+  background-color: white;
+}
+.likertResponse>input:checked+.likertIndicator {
+  border-width: 3px;
+  background-color: #ffe018;
+}
+.visuallyHidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import { getItem, getPonderboxKeys } from "../helpers/storage";
 import { SCENARIOS } from "../helpers/constants";
-import Ponderbox from '../components/ponderBox';
+import Ponderbox from "../components/ponderBox";
+import Likert from "../components/likert";
 
 export default props => {
   const originalProblem = getItem("problemScenario_0");
@@ -11,18 +12,38 @@ export default props => {
   return (
     <main>
       <h1>Results</h1>
+      <p>Below are the answers you entered for all 3 scenarios.</p>
       <p>
-        Below are the answers you entered for all 3 scenarios. 
+        Please <strong>print</strong> out this page or "print" to PDF to save
+        it. If you have any issues, please ask Sammy.
       </p>
-      <p>
-        Please <strong>print</strong> out this page or "print" to PDF to save it. If you have any issues, please ask Sammy.
-      </p>
-      <p>Click your answers below to edit</p>
       <hr />
       <p>Please provide feedback about your experience.</p>
       <Ponderbox allowAdditional={false} placeholder="" storageKey="results" />
-      <hr />
-      <h2>Original Problem Statement</h2>
+      <Likert
+        question="What is your opinion of the President’s performance?"
+        responses={[
+          { value: 1, text: "Abysmal" },
+          { value: 2, text: "Poor" },
+          { value: 3, text: "Average" },
+          { value: 4, text: "Good" },
+          { value: 5, text: "Excellent" }
+        ]}
+        picked={() => {}}
+      />
+      <Likert
+        question="How much do you like pizza?"
+        responses={[
+          { value: 1, text: "Nasty" },
+          { value: 2, text: "Meh" },
+          { value: 3, text: "It’s OK" },
+          { value: 4, text: "Like It" },
+          { value: 5, text: "Love" }
+        ]}
+        picked={() => {}}
+      />
+      <h1 style={{ marginTop: '2em' }}>Original Problem Statement</h1>
+      <p><em>Note: You can edit any of your answers now by selecting one.</em></p>
       <p>{originalProblem}</p>
       {allSectionResults}
     </main>
