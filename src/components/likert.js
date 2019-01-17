@@ -4,6 +4,12 @@ import SHA1 from "crypto-js/sha1";
 import './likert.css';
 
 class LikertScale extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      answer: ''
+    }
+  }
   render() {
     const { question, responses } = this.props;
     const sha = String(SHA1(question)).substring(0, 7);
@@ -28,13 +34,14 @@ class LikertScale extends React.Component {
 
     return (
       <fieldset className="likertScale">
-        <legend>{question}</legend>
+        <legend>{question} <strong className="likertAnswer">{this.state.answer}</strong></legend>
         <div className="likertBand">{radios}</div>
       </fieldset>
     );
   }
 
   chosen = evt => {
+    this.setState( { answer: evt.target.value });
     this.props.picked(evt.target.value);
   }
 }

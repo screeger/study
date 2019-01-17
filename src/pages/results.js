@@ -44,7 +44,7 @@ export default props => {
       />
       <h1 style={{ marginTop: '2em' }}>Original Problem Statement</h1>
       <p><em>Note: You can edit any of your answers now by selecting one.</em></p>
-      <p>{originalProblem}</p>
+      <p contentEditable>{originalProblem}</p>
       {allSectionResults}
     </main>
   );
