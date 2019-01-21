@@ -11,37 +11,98 @@ export default props => {
 
   return (
     <main>
-      <h1>Results</h1>
+      <h1>Feedback and Results</h1>
       <p>Below are the answers you entered for all 3 scenarios.</p>
       <p>
         Please <strong>print</strong> out this page or "print" to PDF to save
         it. If you have any issues, please ask Sammy.
       </p>
       <hr />
-      <p>Please provide feedback about your experience.</p>
-      <Ponderbox allowAdditional={false} placeholder="" storageKey="results" />
+  
+      <label>Full Name: <br />
+        <input size={20} />
+      </label>
+
+      <label>Age: <br />
+        <input size={20} />
+      </label>
+      
+      <label>Education Level (state your major and degree): <br />
+        <input size={20} />
+      </label>  
+     
       <Likert
-        question="What is your opinion of the President’s performance?"
+        question="What is your current occuptation (you may check more than one)?"
         responses={[
-          { value: 1, text: "Abysmal" },
-          { value: 2, text: "Poor" },
-          { value: 3, text: "Average" },
-          { value: 4, text: "Good" },
-          { value: 5, text: "Excellent" }
+          { value: 1, text: "Engineer" },
+          { value: 2, text: "Designer" },
+          { value: 3, text: "Student" },
+          { value: 4, text: "Professor" },
+          { value: 5, text: "Researcher" }
         ]}
         picked={() => {}}
       />
       <Likert
-        question="How much do you like pizza?"
+        question="How helpful did you find the 1st strategy?"
         responses={[
-          { value: 1, text: "Nasty" },
-          { value: 2, text: "Meh" },
-          { value: 3, text: "It’s OK" },
-          { value: 4, text: "Like It" },
-          { value: 5, text: "Love" }
+          { value: 1, text: "Not Helpful" },
+          { value: 2, text: "Slightly Helpful" },
+          { value: 3, text: "Moderately Helpful" },
+          { value: 4, text: "Very Helpful" },
+          { value: 5, text: "Extremely Helpful" }
         ]}
         picked={() => {}}
+        />
+        <Likert
+          question="How helpful did you find the 2nd strategy?"
+          responses={[
+            { value: 1, text: "Not Helpful" },
+            { value: 2, text: "Slightly Helpful" },
+            { value: 3, text: "Moderately Helpful" },
+            { value: 4, text: "Very Helpful" },
+            { value: 5, text: "Extremely Helpful" }
+          ]}
+          picked={() => {}}
+          />
+          <Likert
+            question="How helpful did you find the 3rd strategy?"
+            responses={[
+              { value: 1, text: "Not Helpful" },
+              { value: 2, text: "Slightly Helpful" },
+              { value: 3, text: "Moderately Helpful" },
+              { value: 4, text: "Very Helpful" },
+              { value: 5, text: "Extremely Helpful" }
+            ]}
+            picked={() => {}}
+            />
+            <Likert
+              question="Overall, how easy was it to use the strategies?"
+              responses={[
+                { value: 1, text: "Very Difficult" },
+                { value: 2, text: "Moderately Difficult" },
+                { value: 3, text: "Neither Easy nor Difficult" },
+                { value: 4, text: "Moderately Easy" },
+                { value: 5, text: "Very Easy" }
+              ]}
+              picked={() => {}}
+              />
+              <Likert
+                question="How creative do you think your new statements are compared to your original statement?"
+                responses={[
+                  { value: 1, text: "Not at all Creative" },
+                  { value: 2, text: "Slightly Creative" },
+                  { value: 3, text: "Moderately Creative" },
+                  { value: 4, text: "Very Creative" },
+                  { value: 5, text: "Extremely Creative" }
+                ]}
+                picked={() => {}}
       />
+       <p>Which strategy was the most applicable? Why?</p>
+      <Ponderbox allowAdditional={false} placeholder="" storageKey="applicable" />
+     
+      <p>Did you find any benefit from learning new strategies? Please explain your answer.</p>
+      <Ponderbox allowAdditional={false} placeholder="" storageKey="applicable" />
+
       <h1 style={{ marginTop: '2em' }}>Original Problem Statement</h1>
       <p><em>Note: You can edit any of your answers now by selecting one.</em></p>
       <p contentEditable>{originalProblem}</p>
