@@ -31,6 +31,7 @@ class PonderBox extends React.Component {
         doneEditing={this.save}
         contents={contentsObj.value}
         placeholder={this.props.placeholder}
+        autoFocus={this.props.autoFocus}
       />
     ));
 
@@ -67,13 +68,15 @@ class PonderBox extends React.Component {
 }
 
 PonderBox.defaultProps = {
-  allowAdditional: true
+  allowAdditional: true,
+  autoFocus: true
 };
 
 PonderBox.propTypes = {
   storageKey: PropTypes.string.isRequired,
   allowAdditional: PropTypes.bool,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  autoFocus: PropTypes.bool
 };
 
 export default PonderBox;

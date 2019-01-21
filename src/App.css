@@ -58,3 +58,9 @@ button.themed {
   border-left: thick solid dimgray;
   padding-left: 1em;
 }
+label, legend {
+  font-weight: bold;
+}
+fieldset label {
+  font-weight: normal;
+}
