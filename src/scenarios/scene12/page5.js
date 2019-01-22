@@ -21,7 +21,7 @@ class TimerPage extends React.Component {
       <main>
         <h1 style={{ marginBottom: "3em" }}>Solution Generation</h1>
         <p>
-          Take 5 minutes to generate as many concepts as you can based on the new problem statements you previously generated.
+          Take 5 minutes to generate as many solutions as you can based on the new problem statements you previously generated.
         </p>
 
         <p style={{ margin: "2em", textAlign: "center" }}>

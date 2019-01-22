@@ -220,10 +220,10 @@ function getScenarioHeader(headerId) {
 
 function getSectionHeader(sectionId) {
 	if (sectionId === 'p4') {
-		return 'Section A';
+		return 'Problem Statement Part One';
 	}
 	if (sectionId === 'p6') {
-		return 'Section B';
+		return 'Problem Statement Part Two';
 	}
 	return 'Other Section';
 }
