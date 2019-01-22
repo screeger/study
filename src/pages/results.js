@@ -33,33 +33,29 @@ export default props => {
 				</label>
 			</p>
 
-			<p style={{ marginTop: '2em' }}>
-				<label>
-					Education Level (state your major and degree): <br />
-					<input style={{ width: '100%' }} />
-				</label>
-			</p>
-
 			<fieldset style={{ marginTop: '2em' }}>
-				<legend>What is your current occupation? <em>Check all that apply.</em></legend>
+				<legend>What is your current education level (Major and degree)? </legend>
 				<label>
-					<input type="checkbox" name="occupation" /> Engineer
+					<input type="checkbox" name="occupation" /> Junior Industrial Design B.S.
 				</label>
 				<br />
 				<label>
-					<input type="checkbox" name="occupation" /> Designer
+					<input type="checkbox" name="occupation" /> Senior Industrial Design B.S.
 				</label>
 				<br />
 				<label>
-					<input type="checkbox" name="occupation" /> Student
+					<input type="checkbox" name="occupation" /> Master's Industrial Design
 				</label>
 				<br />
 				<label>
-					<input type="checkbox" name="occupation" /> Professor
+					<input type="checkbox" name="occupation" /> Master's HCI
 				</label>
 				<br />
 				<label>
-					<input type="checkbox" name="occupation" /> Researcher
+					<input type="checkbox" name="occupation" /> Ph.D HCI
+				</label>
+        <label>
+					<input type="checkbox" name="occupation" /> Other
 				</label>
 			</fieldset>
 

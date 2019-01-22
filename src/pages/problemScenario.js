@@ -30,7 +30,7 @@ export default props => {
           <p>Below is the scenario you will use for all 3 strategies:</p>
           <p>
             <em>A city resident has recently donated a corner lot for a playground.
-            You are an engineer who lives in the neighborhood, and you have been
+            You are a designer/engineer who lives in the neighborhood, and you have been
             asked by the city to help with the project. Your task is to design
             playground equipment for the lot using locally sourced materials
             that are able to withstand outdoor conditions all year long.</em>
