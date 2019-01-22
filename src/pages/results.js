@@ -2,7 +2,7 @@ import React from 'react';
 import { getItem, getPonderboxKeys } from '../helpers/storage';
 import { SCENARIOS } from '../helpers/constants';
 import Ponderbox from '../components/ponderBox';
-import Likert from '../components/likert';
+import Likert from 'react-likert-scale';
 
 export default props => {
 	const originalProblem = getItem('problemScenario_0');
