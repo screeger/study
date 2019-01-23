@@ -263,6 +263,5 @@ function getScenarioNames(keyArray) {
 			headerIds.push(parsedKey[1]);
 		}
 	});
-	debugger;
 	return headerIds.filter(onlyUnique).sort();
 }
