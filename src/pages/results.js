@@ -34,13 +34,17 @@ export default props => {
 			</p>
 
 			<fieldset style={{ marginTop: '2em' }}>
-				<legend>What is your current education level (Major and degree)? </legend>
+				<legend>
+					What is your current education level (Major and degree)?{' '}
+				</legend>
 				<label>
-					<input type="checkbox" name="occupation" /> Junior Industrial Design B.S.
+					<input type="checkbox" name="occupation" /> Junior Industrial Design
+					B.S.
 				</label>
 				<br />
 				<label>
-					<input type="checkbox" name="occupation" /> Senior Industrial Design B.S.
+					<input type="checkbox" name="occupation" /> Senior Industrial Design
+					B.S.
 				</label>
 				<br />
 				<label>
@@ -55,80 +59,76 @@ export default props => {
 					<input type="checkbox" name="occupation" /> Ph.D HCI
 				</label>
 				<br />
-        <label>
-					<input type="checkbox" name="occupation" /> Other <input placeholder="please specify" size={35} />
+				<label>
+					<input type="checkbox" name="occupation" /> Other{' '}
+					<input placeholder="please specify" size={35} />
 				</label>
 			</fieldset>
 
-			<p style={{ marginTop: '2em' }}>
-				<Likert
-					question="How helpful did you find the 1st strategy?"
-					responses={[
-						{ value: 1, text: 'Not Helpful' },
-						{ value: 2, text: 'Slightly Helpful' },
-						{ value: 3, text: 'Moderately Helpful' },
-						{ value: 4, text: 'Very Helpful' },
-						{ value: 5, text: 'Extremely Helpful' }
-					]}
-					picked={() => {}}
-				/>
-			</p>
+			<div style={{ height: '2em' }} />
+			<Likert
+				question="How helpful did you find the 1st strategy?"
+				responses={[
+					{ value: 1, text: 'Not Helpful' },
+					{ value: 2, text: 'Slightly Helpful' },
+					{ value: 3, text: 'Moderately Helpful' },
+					{ value: 4, text: 'Very Helpful' },
+					{ value: 5, text: 'Extremely Helpful' }
+				]}
+				picked={() => {}}
+			/>
 
-			<p style={{ marginTop: '2em' }}>
-				<Likert
-					question="How helpful did you find the 2nd strategy?"
-					responses={[
-						{ value: 1, text: 'Not Helpful' },
-						{ value: 2, text: 'Slightly Helpful' },
-						{ value: 3, text: 'Moderately Helpful' },
-						{ value: 4, text: 'Very Helpful' },
-						{ value: 5, text: 'Extremely Helpful' }
-					]}
-					picked={() => {}}
-				/>
-			</p>
+			<div style={{ height: '2em' }} />
+			<Likert
+				question="How helpful did you find the 2nd strategy?"
+				responses={[
+					{ value: 1, text: 'Not Helpful' },
+					{ value: 2, text: 'Slightly Helpful' },
+					{ value: 3, text: 'Moderately Helpful' },
+					{ value: 4, text: 'Very Helpful' },
+					{ value: 5, text: 'Extremely Helpful' }
+				]}
+				picked={() => {}}
+			/>
 
-			<p style={{ marginTop: '2em' }}>
-				<Likert
-					question="How helpful did you find the 3rd strategy?"
-					responses={[
-						{ value: 1, text: 'Not Helpful' },
-						{ value: 2, text: 'Slightly Helpful' },
-						{ value: 3, text: 'Moderately Helpful' },
-						{ value: 4, text: 'Very Helpful' },
-						{ value: 5, text: 'Extremely Helpful' }
-					]}
-					picked={() => {}}
-				/>
-			</p>
+			<div style={{ height: '2em' }} />
+			<Likert
+				question="How helpful did you find the 3rd strategy?"
+				responses={[
+					{ value: 1, text: 'Not Helpful' },
+					{ value: 2, text: 'Slightly Helpful' },
+					{ value: 3, text: 'Moderately Helpful' },
+					{ value: 4, text: 'Very Helpful' },
+					{ value: 5, text: 'Extremely Helpful' }
+				]}
+				picked={() => {}}
+			/>
 
-			<p style={{ marginTop: '2em' }}>
-				<Likert
-					question="Overall, how easy was it to use the strategies?"
-					responses={[
-						{ value: 1, text: 'Very Difficult' },
-						{ value: 2, text: 'Moderately Difficult' },
-						{ value: 3, text: 'Neither Easy nor Difficult' },
-						{ value: 4, text: 'Moderately Easy' },
-						{ value: 5, text: 'Very Easy' }
-					]}
-					picked={() => {}}
-				/>
-			</p>
+			<div style={{ height: '2em' }} />
+			<Likert
+				question="Overall, how easy was it to use the strategies?"
+				responses={[
+					{ value: 1, text: 'Very Difficult' },
+					{ value: 2, text: 'Moderately Difficult' },
+					{ value: 3, text: 'Neither Easy nor Difficult' },
+					{ value: 4, text: 'Moderately Easy' },
+					{ value: 5, text: 'Very Easy' }
+				]}
+				picked={() => {}}
+			/>
 
-			<p style={{ marginTop: '2em' }}>
-				<Likert
-					question="How creative do you think your new statements are compared to your original statement?"
-					responses={[
-						{ value: 1, text: 'Not at all Creative' },
-						{ value: 2, text: 'Slightly Creative' },
-						{ value: 3, text: 'Moderately Creative' },
-						{ value: 4, text: 'Very Creative' },
-						{ value: 5, text: 'Extremely Creative' }
-					]}
-					picked={() => {}}
-				/>
-			</p>
+			<div style={{ height: '2em' }} />
+			<Likert
+				question="How creative do you think your new statements are compared to your original statement?"
+				responses={[
+					{ value: 1, text: 'Not at all Creative' },
+					{ value: 2, text: 'Slightly Creative' },
+					{ value: 3, text: 'Moderately Creative' },
+					{ value: 4, text: 'Very Creative' },
+					{ value: 5, text: 'Extremely Creative' }
+				]}
+				picked={() => {}}
+			/>
 
 			<p style={{ marginTop: '2em', fontWeight: 'bold' }}>
 				Which strategy was the most applicable? Why?
@@ -157,6 +157,27 @@ export default props => {
 			</p>
 			<p contentEditable>{originalProblem}</p>
 			{allSectionResults}
+
+			<div
+				style={{
+					padding: '2em',
+					margin: '2em',
+					backgroundColor: 'whitesmoke',
+					border: 'thin solid dimgray',
+					textAlign: 'center'
+				}}>
+				<span
+					role="img"
+					label="printer icon"
+					style={{
+						fontSize: '2em',
+						paddingRight: '1em',
+						verticalAlign: 'middle'
+					}}>
+					🖨
+				</span>
+				Don’t forget to Print this page or Save to PDF.
+			</div>
 		</main>
 	);
 };

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TitleBlock from "../../components/titleBlock";
 import { SCENARIOS } from "../../helpers/constants";
-import LeadInText from '../../components/lead-in-text';
+import LeadInText, { TopHeader } from '../../components/lead-in-text';
 
 function Overview(props) {
   return (
@@ -11,6 +11,7 @@ function Overview(props) {
         {SCENARIOS[props.id].name}
       </TitleBlock>
       <div className="overview">
+<TopHeader />
         <p>
           <em>
           Who are the others who might replace the primary users of <strong>the playground</strong>? Who else will be affected by the design? In what capacity? Consider both the individuals and the groups.

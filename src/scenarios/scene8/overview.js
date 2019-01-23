@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TitleBlock from "../../components/titleBlock";
 import { SCENARIOS } from "../../helpers/constants";
-import LeadInText from '../../components/lead-in-text';
+import LeadInText, { TopHeader } from '../../components/lead-in-text';
 
 function Overview(props) {
   return (
@@ -11,6 +11,7 @@ function Overview(props) {
         {SCENARIOS[props.id].name}
       </TitleBlock>
       <div className="overview">
+<TopHeader />
         <p>
           <em>
           What are the main functions the design <strong>of the playground</strong> has to focus on?

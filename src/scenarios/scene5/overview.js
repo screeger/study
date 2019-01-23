@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TitleBlock from "../../components/titleBlock";
 import { SCENARIOS } from "../../helpers/constants";
-import LeadInText from '../../components/lead-in-text';
+import LeadInText, { TopHeader } from '../../components/lead-in-text';
 
 function Overview(props) {
   return (
@@ -11,6 +11,7 @@ function Overview(props) {
         {SCENARIOS[props.id].name}
       </TitleBlock>
       <div className="overview">
+<TopHeader />
         <p>
           <em>
           How does the problem determine aesthetic qualities <strong>of the playground</strong>?

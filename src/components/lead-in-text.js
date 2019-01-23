@@ -12,3 +12,7 @@ export default (props) => (
 		</p>
 	</React.Fragment>
 );
+
+export function TopHeader () {
+	return <h1>Let’s define the strategy</h1>
+}
