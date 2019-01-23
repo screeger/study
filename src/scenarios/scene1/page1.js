@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design a product that displays weight</h1>
-        <h2>Consideration 1</h2>
+        <h1>For example, if the scenario were to <strong>Design a product that displays weight</strong>, you might think about... </h1>
+        <h2>Characteristics not similar to you</h2>
         <p>How would a handicapped person use the product? </p>
-        <h2>Consideration 2</h2>
+        <h2>What is of importance to accomplish a task</h2>
         <p>How can the product quickly display weight of your dog?</p>
-        <h2>Consideration 3</h2>
+        <h2>Traditions from other cultures</h2>
         <p>How would someone wearing all their clothes accurately depict weight?</p>
       </main>
     </React.Fragment>

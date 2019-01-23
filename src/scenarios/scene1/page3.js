@@ -14,13 +14,13 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design an online platform that plays music</h1>
-        <h2>Consideration 1</h2>
+        <h1>A final example to consider: <strong>Design an online platform that plays music</strong></h1>
+        <h2>Characteristics that are not similar to you</h2>
         <p>How to easily acclimate someone new to this platform. </p>
-        <h2>Consideration 2</h2>
+        <h2>How their personality affects their needs</h2>
         <p>How to allow someone to discover new music.</p>
-        <h2>Consideration 3</h2>
-        <p>User wants to listen to music without using up cellular data.</p>
+        <h2>What is of importance to accomplish a task</h2>
+        <p>User wants to listen to music without using cellular data.</p>
       </main>
     </React.Fragment>
   );
