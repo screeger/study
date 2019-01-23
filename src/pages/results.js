@@ -44,11 +44,11 @@ export default props => {
 				</label>
 				<br />
 				<label>
-					<input type="checkbox" name="occupation" /> Master's Industrial Design
+					<input type="checkbox" name="occupation" /> Master’s Industrial Design
 				</label>
 				<br />
 				<label>
-					<input type="checkbox" name="occupation" /> Master's HCI
+					<input type="checkbox" name="occupation" /> Master’s HCI
 				</label>
 				<br />
 				<label>
@@ -56,7 +56,7 @@ export default props => {
 				</label>
 				<br />
         <label>
-					<input type="checkbox" name="occupation" /> Other
+					<input type="checkbox" name="occupation" /> Other <input placeholder="please specify" size={35} />
 				</label>
 			</fieldset>
 
