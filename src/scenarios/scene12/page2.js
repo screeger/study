@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h2>Design farm equipment to haul material</h2>
+        <h2>Now let's consider, "Design farm equipment to haul material"</h2>
         <h3>Consideration 1</h3>
         <p>Test that it can withstand all seasons</p>
         <h3>Consideration 2</h3>

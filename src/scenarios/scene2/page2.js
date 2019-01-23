@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h2>Design an event that educates on climate change</h2>
+        <h2>Now let's consider, "Design an event that educates on climate change"</h2>
         <h3>Consideration 1</h3>
         <p>How to attract high school students to be engaged. </p>
         <h3>Consideration 2</h3>

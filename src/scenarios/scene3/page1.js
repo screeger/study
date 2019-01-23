@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h2>For example, if the scenario were to <strong>Design a vehicle that transports you from point A to point B</strong> you might think about...</h2>
+        <h2>For example, if the scenario were to "Design a vehicle that transports you from point A to point B", you might think about...</h2>
         <h3>Consideration 1</h3>
         <p>A cultural group akin to Harley Davidson loyalists would have a particular bias towards the vehicle.</p>
         <h3>Consideration 2</h3>

@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h2>For example, if the scenario were to <strong>Design a thermal jacket</strong> you might think about...</h2>
+        <h2>For example, if the scenario were to "Design a thermal jacket", you might think about...</h2>
         <h3>Consideration 1</h3>
         <p>Create tests to confirm jacket can keep user warm in negative degree weather</p>
         <h3>Consideration 2</h3>

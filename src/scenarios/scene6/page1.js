@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h2>For example, if the scenario were to <strong>Design a product that provides telecommunication across long distances</strong> you might think about...</h2>
+        <h2>For example, if the scenario were to "Design a product that provides telecommunication across long distances", you might think about...</h2>
         <h3>Consideration 1</h3>
         <p>Providing internet in disaster relief areas</p>
         <h3>Consideration 2</h3>

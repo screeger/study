@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h2>Design a product that cleans teeth</h2>
+        <h2>Now let's consider, "Design a product that cleans teeth"</h2>
         <h3>Consideration 1</h3>
         <p>What are the environmental implications of current products? How can it be improved? </p>
         <h3>Consideration 2</h3>

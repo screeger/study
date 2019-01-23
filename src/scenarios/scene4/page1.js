@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h2>For example, if the scenario were to<strong>Design adhesive paper for note-taking</strong> you might think about...</h2>
+        <h2>For example, if the scenario were to "Design adhesive paper for note-taking", you might think about...</h2>
         <h3>Consideration 1</h3>
         <p>Study how burrs attach to objects in nature </p>
         <h3>Consideration 2</h3>

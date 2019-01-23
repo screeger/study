@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h2>For example, if the scenario were to <strong>Design a product that displays weight</strong>, you might think about... </h2>
+        <h2>For example, if the scenario were to "Design a product that displays weight", you might think about... </h2>
         <h3>Characteristics not similar to you</h3>
         <p>How would a handicapped person use the product? </p>
         <h3>What is of importance to accomplish a task</h3>

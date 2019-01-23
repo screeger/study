@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h2>Let's now consider: <strong>Design a shelter for sleeping outdoors</strong>.</h2>
+        <h2>Now let's consider, "Design a shelter for sleeping outdoors"</h2>
         <h3>What is of importance to accomplish the task</h3>
         <p>User needs the process to be fast and easy.</p>
         <h3>Skill level of the User</h3>

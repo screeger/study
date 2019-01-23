@@ -14,7 +14,7 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h2>A final example to consider: <strong>Design an online platform that plays music</strong></h2>
+        <h2>A final example to consider, "Design an online platform that plays music"</h2>
         <h3>Characteristics that are not similar to you</h3>
         <p>How to easily acclimate someone new to this platform. </p>
         <h3>How their personality affects their needs</h3>
