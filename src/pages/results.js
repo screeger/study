@@ -8,6 +8,9 @@ export default props => {
 	const originalProblem = getItem('problemScenario_0');
 	const keyArray = getPonderboxKeys();
 	const allSectionResults = compileAllResults(keyArray);
+	const headerNames = getScenarioNames(keyArray).map(headerId =>
+		getScenarioHeader(headerId)
+	);
 
 	return (
 		<main>
@@ -67,7 +70,7 @@ export default props => {
 
 			<div style={{ height: '2em' }} />
 			<Likert
-				question="How helpful did you find the 1st strategy?"
+				question={`How helpful did you find scenario ${headerNames[0]}?`}
 				responses={[
 					{ value: 1, text: 'Not Helpful' },
 					{ value: 2, text: 'Slightly Helpful' },
@@ -80,7 +83,7 @@ export default props => {
 
 			<div style={{ height: '2em' }} />
 			<Likert
-				question="How helpful did you find the 2nd strategy?"
+				question={`How helpful did you find scenario ${headerNames[1]}?`}
 				responses={[
 					{ value: 1, text: 'Not Helpful' },
 					{ value: 2, text: 'Slightly Helpful' },
@@ -93,7 +96,7 @@ export default props => {
 
 			<div style={{ height: '2em' }} />
 			<Likert
-				question="How helpful did you find the 3rd strategy?"
+				question={`How helpful did you find scenario ${headerNames[2]}?`}
 				responses={[
 					{ value: 1, text: 'Not Helpful' },
 					{ value: 2, text: 'Slightly Helpful' },
@@ -244,4 +247,22 @@ function getSectionHeader(sectionId) {
 		return 'Problem Statement Part Two';
 	}
 	return 'Other Section';
+}
+
+function onlyUnique(value, index, self) {
+	return self.indexOf(value) === index;
+}
+
+function getScenarioNames(keyArray) {
+	// Returns an array of Scenario names. This only works if the student entered something in the
+	// Ponderboxes, which they *should* have.
+	const headerIds = [];
+	keyArray.forEach(key => {
+		const parsedKey = /(^s\d+)(p\d+)/.exec(key);
+		if (parsedKey && parsedKey.length === 3) {
+			headerIds.push(parsedKey[1]);
+		}
+	});
+	debugger;
+	return headerIds.filter(onlyUnique).sort();
 }
