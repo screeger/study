@@ -8,7 +8,7 @@ export default props => {
       <div className="ponderLayout">
         <section>
           <p>
-          Now that you've learned about this strategy, please state a new problem statement by including information from this particular strategy. Enter as many additional problem statements as you can think of.
+          Now that you’ve learned about this strategy, please state a new problem statement by including information from this particular strategy. Enter as many additional problem statements as you can think of.
 
           </p>
           <p>&nbsp;</p>

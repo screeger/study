@@ -54,6 +54,7 @@ export default props => {
 				<label>
 					<input type="checkbox" name="occupation" /> Ph.D HCI
 				</label>
+				<br />
         <label>
 					<input type="checkbox" name="occupation" /> Other
 				</label>

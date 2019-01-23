@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import Timer from "../../components/timer";
+import NewProblemStatements from "../../components/new-problem-statements";
 
 class TimerPage extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class TimerPage extends React.Component {
   }
 
   render() {
+    const { id, pageNbr } = this.props;
     const doneMessage = (
       <p style={{ textAlign: "center" }}>
         
@@ -24,6 +26,7 @@ class TimerPage extends React.Component {
           Take 5 minutes to generate as many solutions as you can based on the new problem statements you previously generated.
         </p>
 
+        <NewProblemStatements storageId={`s${id}p${pageNbr - 1}`} />
         <p style={{ margin: "2em", textAlign: "center" }}>
           <Timer minutes={5.0} onDing={this.showCompletionMessage} />
         </p>
@@ -38,6 +41,8 @@ class TimerPage extends React.Component {
 }
 
 TimerPage.propTypes = {
+  id: PropTypes.number.isRequired,
+  pageNbr: PropTypes.number.isRequired,
   setBtnState: PropTypes.func.isRequired
 }
 
