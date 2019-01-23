@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design a hat that keeps the person’s head warm</h1>
-        <h2>Consideration 1</h2>
+        <h2>Design a hat that keeps the person’s head warm</h2>
+        <h3>Consideration 1</h3>
         <p>Is it culturally appropriate?</p>
-        <h2>Consideration 2</h2>
+        <h3>Consideration 2</h3>
         <p>When/where is it societally taboo to wear a hat?</p>
-        <h2>Consideration 3</h2>
+        <h3>Consideration 3</h3>
         <p>What materials are sustainable for hat manufacturing?</p>
       </main>
     </React.Fragment>

@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>For example, if the scenario were to<strong>Design adhesive paper for note-taking</strong> you might think about...</h1>
-        <h2>Consideration 1</h2>
+        <h2>For example, if the scenario were to<strong>Design adhesive paper for note-taking</strong> you might think about...</h2>
+        <h3>Consideration 1</h3>
         <p>Study how burrs attach to objects in nature </p>
-        <h2>Consideration 2</h2>
+        <h3>Consideration 2</h3>
         <p>Study how lizards easily climb up and around obstacles</p>
-        <h2>Consideration 3</h2>
+        <h3>Consideration 3</h3>
         <p>What are pros/cons of adhesive paper already on the market?</p>
       </main>
     </React.Fragment>

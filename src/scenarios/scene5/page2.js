@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design a product that boils water</h1>
-        <h2>Consideration 1</h2>
+        <h2>Design a product that boils water</h2>
+        <h3>Consideration 1</h3>
         <p>What form lends itself to carrying large amounts of hot liquid?</p>
-        <h2>Consideration 2</h2>
+        <h3>Consideration 2</h3>
         <p>What material lends itself to boiling liquid?</p>
-        <h2>Consideration 3</h2>
+        <h3>Consideration 3</h3>
         <p>What size is reasonable for someone lifting hot liquid?</p>
       </main>
     </React.Fragment>

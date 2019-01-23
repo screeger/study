@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Let's now consider: <strong>Design a shelter for sleeping outdoors</strong>.</h1>
-        <h2>What is of importance to accomplish the task</h2>
+        <h2>Let's now consider: <strong>Design a shelter for sleeping outdoors</strong>.</h2>
+        <h3>What is of importance to accomplish the task</h3>
         <p>User needs the process to be fast and easy.</p>
-        <h2>Skill level of the User</h2>
+        <h3>Skill level of the User</h3>
         <p>User has never camped outdoors before.</p>
-        <h2>Characteristic of the User</h2>
+        <h3>Characteristic of the User</h3>
         <p>User is an Eagle Scout. </p>
       </main>
     </React.Fragment>

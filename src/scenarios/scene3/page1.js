@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>For example, if the scenario were to <strong>Design a vehicle that transports you from point A to point B</strong> you might think about...</h1>
-        <h2>Consideration 1</h2>
+        <h2>For example, if the scenario were to <strong>Design a vehicle that transports you from point A to point B</strong> you might think about...</h2>
+        <h3>Consideration 1</h3>
         <p>A cultural group akin to Harley Davidson loyalists would have a particular bias towards the vehicle.</p>
-        <h2>Consideration 2</h2>
+        <h3>Consideration 2</h3>
         <p>If the government subsidizes electric vehicles, a stronger emphasizing for designing environmentaly friendly vehicles is a priority.</p>
-        <h2>Consideration 3</h2>
+        <h3>Consideration 3</h3>
         <p>Gas mileage and safety are cultural components that need to be considered.</p>
       </main>
     </React.Fragment>

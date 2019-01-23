@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design a public park</h1>
-        <h2>Consideration 1</h2>
+        <h2>Design a public park</h2>
+        <h3>Consideration 1</h3>
         <p>There are seating arrangements</p>
-        <h2>Consideration 2</h2>
+        <h3>Consideration 2</h3>
         <p>Paths for navigation</p>
-        <h2>Consideration 3</h2>
+        <h3>Consideration 3</h3>
         <p>Lights for safety at night</p>
       </main>
     </React.Fragment>

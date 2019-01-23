@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design a product that cleans teeth</h1>
-        <h2>Consideration 1</h2>
+        <h2>Design a product that cleans teeth</h2>
+        <h3>Consideration 1</h3>
         <p>What are the environmental implications of current products? How can it be improved? </p>
-        <h2>Consideration 2</h2>
+        <h3>Consideration 2</h3>
         <p>Consideration the circular lifespan of product (manufacturing to landfill)</p>
-        <h2>Consideration 3</h2>
+        <h3>Consideration 3</h3>
         <p>How does cleaning teeth in Japan differ in the United States?</p>
       </main>
     </React.Fragment>

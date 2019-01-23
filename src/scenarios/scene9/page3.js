@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design the user experience of an airport</h1>
-        <h2>Consideration 1</h2>
+        <h2>Design the user experience of an airport</h2>
+        <h3>Consideration 1</h3>
         <p>Maps for easy navigation </p>
-        <h2>Consideration 2</h2>
+        <h3>Consideration 2</h3>
         <p>Well-lit, easily accessible signs for bathrooms</p>
-        <h2>Consideration 3</h2>
+        <h3>Consideration 3</h3>
         <p>Wide pathways for many people to traverse</p>
       </main>
     </React.Fragment>

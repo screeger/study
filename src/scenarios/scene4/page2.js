@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design a garment that protects from extreme outdoor elements</h1>
-        <h2>Consideration 1</h2>
+        <h2>Design a garment that protects from extreme outdoor elements</h2>
+        <h3>Consideration 1</h3>
         <p>Look into high end fashion examples as inspiration</p>
-        <h2>Consideration 2</h2>
+        <h3>Consideration 2</h3>
         <p>How to spiders weave strong webs?</p>
-        <h2>Consideration 3</h2>
+        <h3>Consideration 3</h3>
         <p>Study animals that live in extreme conditions</p>
       </main>
     </React.Fragment>

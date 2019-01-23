@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>For example, if the scenario were to <strong>Design a writing utensil</strong> you might think about...</h1>
-        <h2>Consideration 1</h2>
+        <h2>For example, if the scenario were to <strong>Design a writing utensil</strong> you might think about...</h2>
+        <h3>Consideration 1</h3>
         <p>What would a utensil look like for teachers? </p>
-        <h2>Consideration 2</h2>
+        <h3>Consideration 2</h3>
         <p>How about Architects?</p>
-        <h2>Consideration 3</h2>
+        <h3>Consideration 3</h3>
         <p>Or 5 year old children?</p>
       </main>
     </React.Fragment>

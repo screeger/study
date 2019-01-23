@@ -14,12 +14,12 @@ function Page(props) {
           navRequested={props.getNextPage}
           color={props.color}
         />
-        <h1>Design farm equipment to haul material</h1>
-        <h2>Consideration 1</h2>
+        <h2>Design farm equipment to haul material</h2>
+        <h3>Consideration 1</h3>
         <p>Test that it can withstand all seasons</p>
-        <h2>Consideration 2</h2>
+        <h3>Consideration 2</h3>
         <p>Provide safety guards around all blades</p>
-        <h2>Consideration 3</h2>
+        <h3>Consideration 3</h3>
         <p>Display safety notifications for maintenance issues (oil changes)</p>
       </main>
     </React.Fragment>
