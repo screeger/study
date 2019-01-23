@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TitleBlock from "../../components/titleBlock";
 import { SCENARIOS } from "../../helpers/constants";
+import LeadInText from '../../components/lead-in-text';
 
 function Overview(props) {
   return (
@@ -9,7 +10,7 @@ function Overview(props) {
       <TitleBlock color={SCENARIOS[props.id].color}>
         {SCENARIOS[props.id].name}
       </TitleBlock>
-      <main>
+      <div className="overview">
         <p>
           <em>
           What are the items or actions that are already known to be true for the <strong>design of the playground</strong>?
@@ -23,9 +24,9 @@ function Overview(props) {
           <li>Are there budget constraints?</li>
           <li>What’s the cost of the design, fabrication, etc?</li>
           <li>What criteria is already guaranteed for the project?</li>
-          
         </ul>
-      </main>
+        <LeadInText scenario={SCENARIOS[props.id].name} />
+      </div>
     </React.Fragment>
   );
 }

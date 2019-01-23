@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TitleBlock from "../../components/titleBlock";
 import { SCENARIOS } from "../../helpers/constants";
+import LeadInText from '../../components/lead-in-text';
 
 function Overview(props) {
   return (
@@ -9,7 +10,7 @@ function Overview(props) {
       <TitleBlock color={SCENARIOS[props.id].color}>
         {SCENARIOS[props.id].name}
       </TitleBlock>
-      <main>
+      <div className="overview">
         <p>
           <em>
           How does the problem determine aesthetic qualities <strong>of the playground</strong>?
@@ -25,7 +26,8 @@ function Overview(props) {
           <li>What is its size in relation to its environment?</li>
           <li>What are the potential material descriptors without specifically stating what type of material is used? </li>
         </ul>
-      </main>
+        <LeadInText scenario={SCENARIOS[props.id].name} />
+      </div>
     </React.Fragment>
   );
 }

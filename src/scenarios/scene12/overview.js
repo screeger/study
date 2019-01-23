@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TitleBlock from "../../components/titleBlock";
 import { SCENARIOS } from "../../helpers/constants";
+import LeadInText from '../../components/lead-in-text';
 
 function Overview(props) {
   return (
@@ -9,7 +10,7 @@ function Overview(props) {
       <TitleBlock color={SCENARIOS[props.id].color}>
         {SCENARIOS[props.id].name}
       </TitleBlock>
-      <main>
+      <div className="overview">
         <p>
           <em>
           How will <strong>the playground</strong> be tested during design and fabrication?
@@ -23,9 +24,9 @@ function Overview(props) {
           <li>What components are prone to breaking?</li>
           <li>How can the user maintain the product?</li>
           <li>What regulatory bodies oversee such testing?</li>
-          
         </ul>
-      </main>
+        <LeadInText scenario={SCENARIOS[props.id].name} />
+      </div>
     </React.Fragment>
   );
 }

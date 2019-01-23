@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TitleBlock from "../../components/titleBlock";
 import { SCENARIOS } from "../../helpers/constants";
+import LeadInText from '../../components/lead-in-text';
 
 function Overview(props) {
   return (
@@ -9,7 +10,7 @@ function Overview(props) {
       <TitleBlock color={SCENARIOS[props.id].color}>
         {SCENARIOS[props.id].name}
       </TitleBlock>
-      <main>
+      <div className="overview">
         <p>
           <em>
           What are potential scenarios where this <strong>playground</strong> could occur in?
@@ -25,7 +26,8 @@ function Overview(props) {
           <li>What are the other potential settings this problem might occur in or the solution could be relevant for?</li>
           <li>What are the characteristics of existing conditions?</li>
         </ul>
-      </main>
+        <LeadInText scenario={SCENARIOS[props.id].name} />
+      </div>
     </React.Fragment>
   );
 }

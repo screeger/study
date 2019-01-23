@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TitleBlock from "../../components/titleBlock";
 import { SCENARIOS } from "../../helpers/constants";
+import LeadInText from '../../components/lead-in-text';
 
 function Overview(props) {
   return (
@@ -9,7 +10,7 @@ function Overview(props) {
       <TitleBlock color={SCENARIOS[props.id].color}>
         {SCENARIOS[props.id].name}
       </TitleBlock>
-      <main>
+      <div className="overview">
         <p>
           <em>
           How can the solution move beyond its functionality to serve other purposes and support the entire context of use? What requirements does the marketplace impose on the <strong>playground design</strong>? 
@@ -23,7 +24,8 @@ function Overview(props) {
           <li>What kind of environmental footprint does it have?</li>
           <li>Are the restrictions temporary?</li>
         </ul>
-      </main>
+        <LeadInText scenario={SCENARIOS[props.id].name} />
+      </div>
     </React.Fragment>
   );
 }
