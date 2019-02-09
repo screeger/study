@@ -76,11 +76,7 @@ class Compass extends React.Component {
 										color: constants.SCENARIOS[this.state.scenario].color,
 										fontSize: '1.2em'
 									}}>
-									Please reference{' '}
-									<strong>
-										Page {(this.progress - 1) * 4 + 1}
-									</strong>{' '}
-									in the packet to begin your first exercise.
+									{this.getPacketText(this.progress)}
 								</div>
 							</React.Fragment>
 						)}
@@ -97,6 +93,18 @@ class Compass extends React.Component {
 		);
 	}
 
+	getPacketText = (progress) => {
+		const packetText = [
+			'',
+			(<React.Fragment>Please reference <strong>Page 1</strong> in the packet to begin your first exercise.</React.Fragment>),
+			(<React.Fragment>Please reference <strong>Page 5</strong> in the packet to begin your second exercise.</React.Fragment>),
+			(<React.Fragment>Please reference <strong>Page 9</strong> in the packet to begin your final exercise.</React.Fragment>),
+		];
+		if (progress > 0 && progress < 4) {
+			return packetText[progress];
+		}
+		return null;
+	}
 	choosenScenario = scenarioId => {
 		this.setState({ scenario: scenarioId });
 		this.props.loadScenario(scenarioId);
