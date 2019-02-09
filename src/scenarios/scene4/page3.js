@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>Design a medical device for patients with diabetes</h2>
-        <h3>Consideration 1</h3>
+        <h3>Find case studies that utilize similar themes for inspiration.</h3>
         <p>What devices are currently on the market? </p>
-        <h3>Consideration 2</h3>
+        <h3>Find case studies that utilize similar themes for inspiration.</h3>
         <p>Identify products that are successful but need improvement.</p>
-        <h3>Consideration 3</h3>
+        <h3>How do your past experiences help tailor innovative ideas?</h3>
         <p>What ways can you make it more user friendly?</p>
       </main>
     </React.Fragment>

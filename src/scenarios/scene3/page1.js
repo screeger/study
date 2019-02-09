@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>For example, if the scenario were to "Design a vehicle that transports you from point A to point B", you might think about...</h2>
-        <h3>Consideration 1</h3>
+        <h3>How does it differ among various cultures?</h3>
         <p>A cultural group akin to Harley Davidson loyalists would have a particular bias towards the vehicle.</p>
-        <h3>Consideration 2</h3>
-        <p>If the government subsidizes electric vehicles, a stronger emphasizing for designing environmentaly friendly vehicles is a priority.</p>
-        <h3>Consideration 3</h3>
+        <h3>What kind of environmental footprint does it have?</h3>
+        <p>If the government subsidizes electric vehicles, a stronger emphasis for designing environmentaly friendly vehicles is a priority.</p>
+        <h3>How does it differ among various cultures?</h3>
         <p>Gas mileage and safety are cultural components that need to be considered.</p>
       </main>
     </React.Fragment>

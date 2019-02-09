@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>Now let's consider, "Design a product that holds your luggage"</h2>
-        <h3>Consideration 1</h3>
+        <h3>How does the context impact the problem?</h3>
         <p>Easily transport luggage across the airport.</p>
-        <h3>Consideration 2</h3>
+        <h3>Potential settings it could be revelant for</h3>
         <p>When waiting at the airport, how can you utilize it as a seat?</p>
-        <h3>Consideration 3</h3>
+        <h3>Potential settings it could be revelant for</h3>
         <p>How to swifty place it in the cabin?</p>
       </main>
     </React.Fragment>

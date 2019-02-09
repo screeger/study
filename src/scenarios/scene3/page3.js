@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>Design a hat that keeps the person’s head warm</h2>
-        <h3>Consideration 1</h3>
+        <h3>How does it differ among various cultures?</h3>
         <p>Is it culturally appropriate?</p>
-        <h3>Consideration 2</h3>
+        <h3>How does it differ among various cultures?</h3>
         <p>When/where is it societally taboo to wear a hat?</p>
-        <h3>Consideration 3</h3>
+        <h3>What kind of environmental footprint does it have?</h3>
         <p>What materials are sustainable for hat manufacturing?</p>
       </main>
     </React.Fragment>

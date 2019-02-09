@@ -18,7 +18,7 @@ export default props => {
 			<p>Below are the answers you entered for all 3 scenarios.</p>
 			<p>
 				Please <strong>print</strong> out this page or “print” to PDF to save
-				it. If you have any issues, please ask Sammy.
+				it and send to <strong>screeger@iastate.edu</strong>. If you have any issues, please ask Sammy.
 			</p>
 			<hr />
 
@@ -179,7 +179,7 @@ export default props => {
 					}}>
 					🖨
 				</span>
-				Don’t forget to Print this page or Save to PDF.
+				Don’t forget to Print this page or Save to PDF<p> and send to screeger@iastate.edu.</p>
 			</div>
 		</main>
 	);

@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>For example, if the scenario were to "Design adhesive paper for note-taking", you might think about...</h2>
-        <h3>Consideration 1</h3>
+        <h3>Use cues from nature (biomimicry) to inspire ideas.</h3>
         <p>Study how burrs attach to objects in nature </p>
-        <h3>Consideration 2</h3>
+        <h3>Use cues from nature (biomimicry) to inspire ideas.</h3>
         <p>Study how lizards easily climb up and around obstacles</p>
-        <h3>Consideration 3</h3>
+        <h3>Find case studies that utilize similar themes for inspiration.</h3>
         <p>What are pros/cons of adhesive paper already on the market?</p>
       </main>
     </React.Fragment>
