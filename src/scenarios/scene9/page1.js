@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>For example, if the scenario were to "Design a library", you might think about...</h2>
-        <h3>Consideration 1</h3>
+        <h3>What criteria is already guaranteed for the project?</h3>
         <p>It needs to be suitable for all ages</p>
-        <h3>Consideration 2</h3>
+        <h3>What criteria is already guaranteed for the project?</h3>
         <p>Needs to provide community spaces</p>
-        <h3>Consideration 3</h3>
+        <h3>What criteria is already guaranteed for the project?</h3>
         <p>Must include a computer room</p>
       </main>
     </React.Fragment>

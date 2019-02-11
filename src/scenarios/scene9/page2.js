@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>Now let's consider, "Design a public park"</h2>
-        <h3>Consideration 1</h3>
+        <h3>What criteria is already guaranteed for the project?</h3>
         <p>There are seating arrangements</p>
-        <h3>Consideration 2</h3>
+        <h3>What criteria is already guaranteed for the project?</h3>
         <p>Paths for navigation</p>
-        <h3>Consideration 3</h3>
+        <h3>What criteria is already guaranteed for the project?</h3>
         <p>Lights for safety at night</p>
       </main>
     </React.Fragment>

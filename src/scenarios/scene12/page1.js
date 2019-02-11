@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>For example, if the scenario were to "Design a thermal jacket", you might think about...</h2>
-        <h3>Consideration 1</h3>
+        <h3>What types of tests are performed on the product?</h3>
         <p>Create tests to confirm jacket can keep user warm in negative degree weather</p>
-        <h3>Consideration 2</h3>
+        <h3>Company provides maintenance</h3>
         <p>Provide lifetime service if jacket is damaged</p>
-        <h3>Consideration 3</h3>
+        <h3>What components are prone to breaking?</h3>
         <p>Ensure zippers and pockets are functioning</p>
       </main>
     </React.Fragment>

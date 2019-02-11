@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>For example, if the scenario were to "Design a device that aids farming crops", you might think about...</h2>
-        <h3>Consideration 1</h3>
+        <h3>Basic functions</h3>
         <p>Needs to dig and break ground</p>
-        <h3>Consideration 2</h3>
+        <h3>Basic functions</h3>
         <p>Plow and till soil</p>
-        <h3>Consideration 3</h3>
+        <h3>Basic functions</h3>
         <p>Plant seeds</p>
       </main>
     </React.Fragment>

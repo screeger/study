@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>Design a wearable that keeps track of time</h2>
-        <h3>Consideration 1</h3>
+        <h3>What are the digital characteristics?</h3>
         <p>What does the interface look like?</p>
-        <h3>Consideration 2</h3>
+        <h3>What are the tangible characteristics?</h3>
         <p>What does the physical wearable look like?</p>
-        <h3>Consideration 3</h3>
+        <h3>What are the potential material descriptors?</h3>
         <p>How does the wearable lend itself to telling time visually?</p>
       </main>
     </React.Fragment>

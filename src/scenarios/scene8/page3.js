@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>Design a dog travel crate</h2>
-        <h3>Consideration 1</h3>
+        <h3>Basic function</h3>
         <p>Keep the dog safe and comfortable </p>
-        <h3>Consideration 2</h3>
+        <h3>Primary function</h3>
         <p>Avoid the dog from escaping</p>
-        <h3>Consideration 3</h3>
+        <h3>Basic function</h3>
         <p>Safely transport dog from point A to B</p>
       </main>
     </React.Fragment>

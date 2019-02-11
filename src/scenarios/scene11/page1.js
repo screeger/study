@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>For example, if the scenario were to "Design a coffee mug", you might think about...</h2>
-        <h3>Consideration 1</h3>
+        <h3>Can it be on-the-go?</h3>
         <p>Transport to work</p>
-        <h3>Consideration 2</h3>
+        <h3>Is it adjustable?</h3>
         <p>Aid in car transportation</p>
-        <h3>Consideration 3</h3>
+        <h3>Does it inspire movement?</h3>
         <p>Fitness classes</p>
       </main>
     </React.Fragment>

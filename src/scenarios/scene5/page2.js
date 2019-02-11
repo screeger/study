@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>Now let's consider, "Design a product that boils water"</h2>
-        <h3>Consideration 1</h3>
+        <h3>What are tangible characteristics of the solution?</h3>
         <p>What form lends itself to carrying large amounts of hot liquid?</p>
-        <h3>Consideration 2</h3>
+        <h3>What are potential material descriptors?</h3>
         <p>What material lends itself to boiling liquid?</p>
-        <h3>Consideration 3</h3>
+        <h3>What is its size in relation to its environment?</h3>
         <p>What size is reasonable for someone lifting hot liquid?</p>
       </main>
     </React.Fragment>

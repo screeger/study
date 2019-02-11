@@ -15,11 +15,11 @@ function Page(props) {
           color={props.color}
         />
         <h2>Now let's consider, "Design a kid-friendly toy"</h2>
-        <h3>Consideration 1</h3>
+        <h3>Interaction psychologically</h3>
         <p>How does it help the kid learn?</p>
-        <h3>Consideration 2</h3>
+        <h3>Interaction psychologically</h3>
         <p>Is is suitable for their cognitive abilities?</p>
-        <h3>Consideration 3</h3>
+        <h3>Emotional interaction</h3>
         <p>Is it safe but fun for the kid to use?</p>
       </main>
     </React.Fragment>
