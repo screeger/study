@@ -17,7 +17,7 @@ export default props => {
         For this study, you will receive 3 random strategies. The next page will
         provide your "project". The paper and pen you received is to help you
         think through ideas. This is your worksheet before entering your
-        throughts on the computer.
+        thoughts on the computer.
       </p>
 
       <h2>Why Use This Tool?</h2>
