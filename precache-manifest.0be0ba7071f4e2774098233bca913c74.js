@@ -672,12 +672,12 @@ self.__precacheManifest = [
     "url": "/study/static/js/95.1d36ec11.chunk.js"
   },
   {
-    "revision": "e69598b01da54f3aca58",
+    "revision": "cf9ce0578954cba0d44d",
     "url": "/study/static/css/main.12ff5518.chunk.css"
   },
   {
-    "revision": "e69598b01da54f3aca58",
-    "url": "/study/static/js/main.e69598b0.chunk.js"
+    "revision": "cf9ce0578954cba0d44d",
+    "url": "/study/static/js/main.cf9ce057.chunk.js"
   },
   {
     "revision": "9a075891048e773d8f2d",
@@ -704,7 +704,7 @@ self.__precacheManifest = [
     "url": "/study/static/media/CompassNeedle.75e77d07.svg"
   },
   {
-    "revision": "9eb50f128c959bf797926a79aa6252aa",
+    "revision": "603663d649871cb8f1b9c59fafb41216",
     "url": "/study/index.html"
   }
 ];
